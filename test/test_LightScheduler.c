@@ -27,6 +27,19 @@ void checkLightState(int id, int state)
     TEST_ASSERT_EQUAL(state, LightControllerSpy_GetLastState());
 }
 
+void test_LightScheduler_InitStartsOneMinuteAlarm(void)
+{
+    TEST_ASSERT_EQUAL((void*)LightScheduler_Wakeup, (void*)FakeTimeService_GetAlarmCallback());
+    TEST_ASSERT_EQUAL(60, FakeTimeService_GetAlarmPeriod());
+}
+
+void test_LightScheduler_DeinitCancelsOneMinuteAlarm(void)
+{
+    LightScheduler_Deinit();
+    TEST_ASSERT_NULL((void*)FakeTimeService_GetAlarmCallback());
+    TEST_ASSERT_EQUAL(0, FakeTimeService_GetAlarmPeriod());
+}
+
 void test_LightScheduler_NoChangeToLightsDuringInitialization(void)
 {
     checkLightState(LIGHT_ID_UNKNOWN, LIGHT_STATE_UNKNOWN);
@@ -36,9 +49,7 @@ void test_LightScheduler_ScheduleOnEverydayNotTimeYet(void)
 {
     LightScheduler_ScheduleTurnOn(3, EVERYDAY, 1200);
     setTimeTo(MONDAY, 1199);
-
     LightScheduler_Wakeup();
-
     checkLightState(LIGHT_ID_UNKNOWN, LIGHT_STATE_UNKNOWN);
 }
 
@@ -46,9 +57,7 @@ void test_LightScheduler_ScheduleOnEverydayItsTime(void)
 {
     LightScheduler_ScheduleTurnOn(3, EVERYDAY, 1200);
     setTimeTo(MONDAY, 1200);
-
     LightScheduler_Wakeup();
-
     checkLightState(3, LIGHT_ON);
 }
 
@@ -56,8 +65,70 @@ void test_LightScheduler_ScheduleOffEverydayItsTime(void)
 {
     LightScheduler_ScheduleTurnOff(3, EVERYDAY, 1200);
     setTimeTo(MONDAY, 1200);
-
     LightScheduler_Wakeup();
-
     checkLightState(3, LIGHT_OFF);
+}
+
+void test_LightScheduler_ScheduleTuesdayItsMonday(void)
+{
+    LightScheduler_ScheduleTurnOn(3, TUESDAY, 1200);
+    setTimeTo(MONDAY, 1200);
+    LightScheduler_Wakeup();
+    checkLightState(LIGHT_ID_UNKNOWN, LIGHT_STATE_UNKNOWN);
+}
+
+void test_LightScheduler_ScheduleTuesdayItsTuesday(void)
+{
+    LightScheduler_ScheduleTurnOn(3, TUESDAY, 1200);
+    setTimeTo(TUESDAY, 1200);
+    LightScheduler_Wakeup();
+    checkLightState(3, LIGHT_ON);
+}
+
+void test_LightScheduler_ScheduleWeekendItsFriday(void)
+{
+    LightScheduler_ScheduleTurnOn(3, WEEKEND, 1200);
+    setTimeTo(FRIDAY, 1200);
+    LightScheduler_Wakeup();
+    checkLightState(LIGHT_ID_UNKNOWN, LIGHT_STATE_UNKNOWN);
+}
+
+void test_LightScheduler_ScheduleWeekendItsSaturday(void)
+{
+    LightScheduler_ScheduleTurnOn(3, WEEKEND, 1200);
+    setTimeTo(SATURDAY, 1200);
+    LightScheduler_Wakeup();
+    checkLightState(3, LIGHT_ON);
+}
+
+void test_LightScheduler_ScheduleWeekendItsSunday(void)
+{
+    LightScheduler_ScheduleTurnOn(3, WEEKEND, 1200);
+    setTimeTo(SUNDAY, 1200);
+    LightScheduler_Wakeup();
+    checkLightState(3, LIGHT_ON);
+}
+
+void test_LightScheduler_ScheduleWeekendItsMonday(void)
+{
+    LightScheduler_ScheduleTurnOn(3, WEEKEND, 1200);
+    setTimeTo(MONDAY, 1200);
+    LightScheduler_Wakeup();
+    checkLightState(LIGHT_ID_UNKNOWN, LIGHT_STATE_UNKNOWN);
+}
+
+void test_LightScheduler_ScheduleWeekdayItsMonday(void)
+{
+    LightScheduler_ScheduleTurnOn(3, WEEKDAY, 1200);
+    setTimeTo(MONDAY, 1200);
+    LightScheduler_Wakeup();
+    checkLightState(3, LIGHT_ON);
+}
+
+void test_LightScheduler_ScheduleWeekdayItsSunday(void)
+{
+    LightScheduler_ScheduleTurnOn(3, WEEKDAY, 1200);
+    setTimeTo(SUNDAY, 1200);
+    LightScheduler_Wakeup();
+    checkLightState(LIGHT_ID_UNKNOWN, LIGHT_STATE_UNKNOWN);
 }

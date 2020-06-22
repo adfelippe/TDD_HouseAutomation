@@ -28,6 +28,8 @@
 #ifndef D_TimeService_H
 #define D_TimeService_H
 
+#include <stdio.h>
+
 enum
 {
     NONE = - 1,
@@ -43,25 +45,20 @@ enum
     WEEKEND
 };
 
-typedef struct 
+typedef struct
 {
     int minuteOfDay;
     int dayOfWeek;
 } Time;
+
+typedef void (*WakeupCallback)(void);
 
 void TimeService_Create(void);
 void TimeService_Destroy(void);
 void TimeService_GetTime(Time *);
 int TimeService_GetMinute(void);
 int TimeService_GetDay(void);
-
-typedef void (*WakeupCallback)(void);
-
-void TimeService_SetPeriodicAlarmInSeconds(
-        int seconds, WakeupCallback);
-
-void TimeService_CancelPeriodicAlarmInSeconds(
-        int seconds, WakeupCallback);
-
+void TimeService_SetPeriodicAlarmInSeconds(int seconds, WakeupCallback);
+void TimeService_CancelPeriodicAlarmInSeconds(int seconds, WakeupCallback);
 
 #endif  /* D_TimeService_H */
