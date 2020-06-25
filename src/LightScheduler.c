@@ -10,9 +10,9 @@ typedef struct
     int event;
 } ScheduledLightEvent;
 
-static ScheduledLightEvent scheduledEvent;
+static ScheduledLightEvent scheduledEvents[MAX_EVENTS];
 
-static void scheduleEvent(int id, int day, int minuteOfDay, int event);
+static int scheduleEvent(int id, int day, int minuteOfDay, int event);
 static void processEventDueNow(Time *time, ScheduledLightEvent *lightEvent);
 static void operateLight(ScheduledLightEvent *lightEvent);
 static bool DoesLightRespondToday(Time *time, int reactionDay);
@@ -20,7 +20,9 @@ static bool DoesLightRespondToday(Time *time, int reactionDay);
 
 void LightScheduler_Init(void)
 {
-    scheduledEvent.id = UNUSED;
+    for (int i = 0; i < MAX_EVENTS; i++)
+        scheduledEvents[i].id = UNUSED;
+
     TimeService_SetPeriodicAlarmInSeconds(60, LightScheduler_Wakeup);
 }
 
@@ -29,14 +31,24 @@ void LightScheduler_Deinit(void)
     TimeService_CancelPeriodicAlarmInSeconds(60, LightScheduler_Wakeup);
 }
 
-void LightScheduler_ScheduleTurnOn(int id, int day, int minuteOfDay)
+int LightScheduler_ScheduleTurnOn(int id, int day, int minuteOfDay)
 {
-    scheduleEvent(id, day, minuteOfDay, TURN_ON);
+    return scheduleEvent(id, day, minuteOfDay, TURN_ON);
 }
 
-void LightScheduler_ScheduleTurnOff(int id, int day, int minuteOfDay)
+int LightScheduler_ScheduleTurnOff(int id, int day, int minuteOfDay)
 {
-    scheduleEvent(id, day, minuteOfDay, TURN_OFF);
+    return scheduleEvent(id, day, minuteOfDay, TURN_OFF);
+}
+
+void LightScheduler_ScheduleRemove(int id, int day, int minuteOfDay)
+{
+    for (int i = 0; i < MAX_EVENTS; i++) {
+        if (scheduledEvents[i].id == id && scheduledEvents[i].day == day &&
+            scheduledEvents[i].minuteOfDay == minuteOfDay) {
+                scheduledEvents[i].id = UNUSED;
+            }
+    }
 }
 
 void LightScheduler_Wakeup(void)
@@ -44,15 +56,23 @@ void LightScheduler_Wakeup(void)
     Time time;
     TimeService_GetTime(&time);
 
-    processEventDueNow(&time, &scheduledEvent);
+    for (int i = 0; i < MAX_EVENTS; i++)
+        processEventDueNow(&time, &scheduledEvents[i]);
 }
 
-static void scheduleEvent(int id, int day, int minuteOfDay, int event)
+static int scheduleEvent(int id, int day, int minuteOfDay, int event)
 {
-    scheduledEvent.id = id;
-    scheduledEvent.minuteOfDay = minuteOfDay;
-    scheduledEvent.event = event;
-    scheduledEvent.day = day;
+    for (int i = 0; i < MAX_EVENTS; i++) {
+        if (scheduledEvents[i].id == UNUSED) {
+            scheduledEvents[i].day = day;
+            scheduledEvents[i].minuteOfDay = minuteOfDay;
+            scheduledEvents[i].event = event;
+            scheduledEvents[i].id = id;
+            return LS_OK;
+        }
+    }
+
+    return LS_TOO_MANY_EVENTS;
 }
 
 static void processEventDueNow(Time *time, ScheduledLightEvent *lightEvent)
