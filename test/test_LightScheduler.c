@@ -155,11 +155,39 @@ void test_LightScheduler_RejectsTooManyEvents(void)
     TEST_ASSERT_EQUAL(LS_TOO_MANY_EVENTS, LightScheduler_ScheduleTurnOn(6, MONDAY, 1200));
 }
 
-void test_LightScheduler_RemoveFreeScheduleSlot(void)
+void test_LightScheduler_RemoveFreesScheduleSlot(void)
 {
     for (int i = 0; i < MAX_EVENTS; i++)
         TEST_ASSERT_EQUAL(LS_OK, LightScheduler_ScheduleTurnOn(6, MONDAY, 600 + i));
 
     LightScheduler_ScheduleRemove(6, MONDAY, 600);
     TEST_ASSERT_EQUAL(LS_OK, LightScheduler_ScheduleTurnOn(11, MONDAY, 1200));
+}
+
+void test_LightScheduler_RemoveMultipleScheduleEvent(void)
+{
+    LightScheduler_ScheduleTurnOn(6, MONDAY, 600);
+    LightScheduler_ScheduleTurnOn(7, MONDAY, 600);
+
+    LightScheduler_ScheduleRemove(6, MONDAY, 600);
+
+    setTimeTo(MONDAY, 600);
+
+    LightScheduler_Wakeup();
+
+    checkLightState(6, LIGHT_STATE_UNKNOWN);
+    checkLightState(7, LIGHT_ON);
+}
+
+void test_LightScheduler_AcceptsValidLightIds(void)
+{
+    TEST_ASSERT_EQUAL(LS_OK, LightScheduler_ScheduleTurnOn(0, MONDAY, 600));
+    TEST_ASSERT_EQUAL(LS_OK, LightScheduler_ScheduleTurnOn(15, MONDAY, 600));
+    TEST_ASSERT_EQUAL(LS_OK, LightScheduler_ScheduleTurnOn(31, MONDAY, 600));
+}
+
+void test_LightScheduler_RejectsInvalidLightIds(void)
+{
+    TEST_ASSERT_EQUAL(LS_ID_OUT_OF_BOUNDS, LightScheduler_ScheduleTurnOn(-1, MONDAY, 600));
+    TEST_ASSERT_EQUAL(LS_ID_OUT_OF_BOUNDS, LightScheduler_ScheduleTurnOn(32, MONDAY, 600));
 }

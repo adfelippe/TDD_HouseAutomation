@@ -16,6 +16,8 @@ static int scheduleEvent(int id, int day, int minuteOfDay, int event);
 static void processEventDueNow(Time *time, ScheduledLightEvent *lightEvent);
 static void operateLight(ScheduledLightEvent *lightEvent);
 static bool DoesLightRespondToday(Time *time, int reactionDay);
+static bool isEventScheduled(int i, int id, int day, int minuteOfDay);
+static bool isIdOutOfBounds(int id);
 
 
 void LightScheduler_Init(void)
@@ -44,10 +46,8 @@ int LightScheduler_ScheduleTurnOff(int id, int day, int minuteOfDay)
 void LightScheduler_ScheduleRemove(int id, int day, int minuteOfDay)
 {
     for (int i = 0; i < MAX_EVENTS; i++) {
-        if (scheduledEvents[i].id == id && scheduledEvents[i].day == day &&
-            scheduledEvents[i].minuteOfDay == minuteOfDay) {
+        if (isEventScheduled(i, id, day, minuteOfDay))
                 scheduledEvents[i].id = UNUSED;
-            }
     }
 }
 
@@ -62,6 +62,9 @@ void LightScheduler_Wakeup(void)
 
 static int scheduleEvent(int id, int day, int minuteOfDay, int event)
 {
+    if (isIdOutOfBounds(id))
+        return LS_ID_OUT_OF_BOUNDS;
+
     for (int i = 0; i < MAX_EVENTS; i++) {
         if (scheduledEvents[i].id == UNUSED) {
             scheduledEvents[i].day = day;
@@ -111,5 +114,18 @@ static bool DoesLightRespondToday(Time *time, int reactionDay)
         return true;
     if (reactionDay == WEEKDAY && (today >= MONDAY && today <= FRIDAY))
         return true;
+        
     return false;
+}
+
+static bool isEventScheduled(int i, int id, int day, int minuteOfDay)
+{
+    return (scheduledEvents[i].id == id &&
+            scheduledEvents[i].day == day &&
+            scheduledEvents[i].minuteOfDay == minuteOfDay);
+}
+
+static bool isIdOutOfBounds(int id)
+{
+    return (id < 0 || id >= MAX_LIGHTS);
 }

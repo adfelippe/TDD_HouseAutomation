@@ -5,7 +5,7 @@
 
 #define MAX_EVENTS      128
 
-enum {LS_OK = 0, LS_TOO_MANY_EVENTS = -1};
+enum {LS_OK = 0, LS_TOO_MANY_EVENTS = -1, LS_ID_OUT_OF_BOUNDS = -2};
 
 void LightScheduler_Init(void);
 void LightScheduler_Deinit(void);
