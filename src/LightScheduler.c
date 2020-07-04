@@ -1,6 +1,7 @@
 #include "LightScheduler.h"
 #include "LightController.h"
 #include "TimeService.h"
+#include "RandomMinute.h"
 
 typedef struct
 {
@@ -9,6 +10,8 @@ typedef struct
     int minuteOfDay;
     int event;
 } ScheduledLightEvent;
+
+int (*RandomMinute_Get)(void);
 
 static ScheduledLightEvent scheduledEvents[MAX_EVENTS];
 
@@ -41,6 +44,16 @@ int LightScheduler_ScheduleTurnOn(int id, int day, int minuteOfDay)
 int LightScheduler_ScheduleTurnOff(int id, int day, int minuteOfDay)
 {
     return scheduleEvent(id, day, minuteOfDay, TURN_OFF);
+}
+
+void LightScheduler_Randomize(int id, int day, int minuteOfDay)
+{
+    int randomMinute = RandomMinute_Get();
+
+    for (int i = 0; i < MAX_EVENTS; i++) {
+        if (isEventScheduled(i, id, day, minuteOfDay))
+                scheduledEvents[i].minuteOfDay += randomMinute;
+    }
 }
 
 void LightScheduler_ScheduleRemove(int id, int day, int minuteOfDay)
@@ -114,7 +127,7 @@ static bool DoesLightRespondToday(Time *time, int reactionDay)
         return true;
     if (reactionDay == WEEKDAY && (today >= MONDAY && today <= FRIDAY))
         return true;
-        
+
     return false;
 }
 

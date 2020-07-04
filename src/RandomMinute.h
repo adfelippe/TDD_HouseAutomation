@@ -6,7 +6,6 @@
 
 
 void RandomMinute_Init(int bound);
-int RandomMinute_Get(int seed);
-
+extern int (*RandomMinute_Get)(void);
 
 #endif // _RANDOMMINUTE_H

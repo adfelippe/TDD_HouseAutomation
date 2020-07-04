@@ -12,6 +12,7 @@ void LightScheduler_Deinit(void);
 int LightScheduler_ScheduleTurnOn(int id, int day, int minuteOfDay);
 int LightScheduler_ScheduleTurnOff(int id, int day, int minuteOfDay);
 void LightScheduler_ScheduleRemove(int id, int day, int minuteOfDay);
+void LightScheduler_Randomize(int id, int day, int minuteOfDay);
 void LightScheduler_Wakeup(void);
 
 #endif // LIGHTSCHEDULER_H
