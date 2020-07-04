@@ -3,9 +3,13 @@
 
 #include <stdbool.h>
 
-#define MAX_EVENTS      128
+#define MAX_EVENTS              128
+#define LIMIT_SCHEDULE_TIME     1439    // 1439 minutes is 23:59
 
-enum {LS_OK = 0, LS_TOO_MANY_EVENTS = -1, LS_ID_OUT_OF_BOUNDS = -2};
+enum {LS_OK = 0,
+      LS_TOO_MANY_EVENTS = -1,
+      LS_ID_OUT_OF_BOUNDS = -2,
+      LS_INVALID_TIME = -3};
 
 void LightScheduler_Init(void);
 void LightScheduler_Deinit(void);

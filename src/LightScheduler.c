@@ -21,6 +21,7 @@ static void operateLight(ScheduledLightEvent *lightEvent);
 static bool DoesLightRespondToday(Time *time, int reactionDay);
 static bool isEventScheduled(int i, int id, int day, int minuteOfDay);
 static bool isIdOutOfBounds(int id);
+static void fixRandomizedTimeFromMidnightOffset(int i);
 
 
 void LightScheduler_Init(void)
@@ -53,6 +54,7 @@ void LightScheduler_Randomize(int id, int day, int minuteOfDay)
     for (int i = 0; i < MAX_EVENTS; i++) {
         if (isEventScheduled(i, id, day, minuteOfDay))
                 scheduledEvents[i].minuteOfDay += randomMinute;
+                fixRandomizedTimeFromMidnightOffset(i);
     }
 }
 
@@ -77,6 +79,9 @@ static int scheduleEvent(int id, int day, int minuteOfDay, int event)
 {
     if (isIdOutOfBounds(id))
         return LS_ID_OUT_OF_BOUNDS;
+
+    if (minuteOfDay > LIMIT_SCHEDULE_TIME)
+        return LS_INVALID_TIME;
 
     for (int i = 0; i < MAX_EVENTS; i++) {
         if (scheduledEvents[i].id == UNUSED) {
@@ -141,4 +146,11 @@ static bool isEventScheduled(int i, int id, int day, int minuteOfDay)
 static bool isIdOutOfBounds(int id)
 {
     return (id < 0 || id >= MAX_LIGHTS);
+}
+
+static void fixRandomizedTimeFromMidnightOffset(int i)
+{
+    if (scheduledEvents[i].minuteOfDay > LIMIT_SCHEDULE_TIME) {
+        scheduledEvents[i].minuteOfDay -= LIMIT_SCHEDULE_TIME + 1;
+    }
 }

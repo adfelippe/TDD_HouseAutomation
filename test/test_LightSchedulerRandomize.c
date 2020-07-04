@@ -51,3 +51,29 @@ void test_LightSchedulerRandomize_TurnsOnEarly(void)
 
     checkLightState(4, LIGHT_ON);
 }
+
+void test_LightSchedulerRandomize_TurnsOnLater(void)
+{
+    FakeRandomMinute_SetFirstAndIncrement(20, 5);
+    LightScheduler_ScheduleTurnOn(4, EVERYDAY, 600);
+    LightScheduler_Randomize(4, EVERYDAY, 600);
+
+    setTimeTo(MONDAY, 600+20);
+
+    LightScheduler_Wakeup();
+
+    checkLightState(4, LIGHT_ON);
+}
+
+void test_LightSchedulerRandomize_TurnsOnAfterMidnightWhenSetBeforeMidnight(void)
+{
+    FakeRandomMinute_SetFirstAndIncrement(10, 5);
+    LightScheduler_ScheduleTurnOn(4, EVERYDAY, LIMIT_SCHEDULE_TIME);
+    LightScheduler_Randomize(4, EVERYDAY, LIMIT_SCHEDULE_TIME);
+
+    setTimeTo(MONDAY, 10 - 1);
+
+    LightScheduler_Wakeup();
+
+    checkLightState(4, LIGHT_ON);
+}

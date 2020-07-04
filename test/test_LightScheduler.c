@@ -191,3 +191,8 @@ void test_LightScheduler_RejectsInvalidLightIds(void)
     TEST_ASSERT_EQUAL(LS_ID_OUT_OF_BOUNDS, LightScheduler_ScheduleTurnOn(-1, MONDAY, 600));
     TEST_ASSERT_EQUAL(LS_ID_OUT_OF_BOUNDS, LightScheduler_ScheduleTurnOn(32, MONDAY, 600));
 }
+
+void test_LightScheduler_RejectsInvalidTimeAfterMidnight(void)
+{
+    TEST_ASSERT_EQUAL(LS_INVALID_TIME, LightScheduler_ScheduleTurnOn(3, MONDAY, 1500));
+}
