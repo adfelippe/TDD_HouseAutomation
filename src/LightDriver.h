@@ -24,18 +24,35 @@
 /*-    www.renaissancesoftware.net james@renaissancesoftware.net       -*/
 /*- ------------------------------------------------------------------ -*/
 
+#ifndef D_LightDriver_H
+#define D_LightDriver_H
 
-#ifndef D_LightController_H
-#define D_LightController_H
 
-#include <stdint.h>
-#include <stdbool.h>
-#include "LightDriver.h"
+enum { MAX_LIGHTS = 32 };
+enum { LIGHT_ID_UNKNOWN = -1, LIGHT_STATE_UNKNOWN = -1, LIGHT_ID_OK = 0 };
+enum { LIGHT_OFF = 0, LIGHT_ON = 1 };
+enum { TURN_OFF = 0, TURN_ON = 1 };
+enum { UNUSED = 0 };
 
-void LightController_Create(void);
-void LightController_Destroy(void);
-void LightController_On(int id);
-void LightController_Off(int id);
-bool LightController_Add(int id, LightDriver lightDriver);
+typedef enum  LightDriverType
+{
+    TestLightDriver,
+    X10,
+    AcmeWireless,
+    MemoryMapped
+ } LightDriverType;
 
-#endif  /* D_LightController_H */
+typedef struct LightDriverStruct * LightDriver;
+
+typedef struct LightDriverInterfaceStruct * LightDriverInterface;
+
+void LightDriver_SetInterface(LightDriverInterface);
+void LightDriver_Destroy(LightDriver);
+int8_t LightDriver_TurnOn(LightDriver);
+int8_t LightDriver_TurnOff(LightDriver);
+const char * LightDriver_GetType(LightDriver);
+int LightDriver_GetId(LightDriver);
+
+#include "LightDriverPrivate.h"
+
+#endif  /* D_LightDriver_H */

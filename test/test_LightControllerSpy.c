@@ -22,15 +22,15 @@ void test_LightControllerSpy_Initialize(void)
 
 void test_LightControllerSpy_RememberTheLastLightIdControlled(void)
 {
-    LightController_On(10);
+    LightControllerSpy_On(10);
     TEST_ASSERT_EQUAL(10, LightControllerSpy_GetLastId());
     TEST_ASSERT_EQUAL(LIGHT_ON, LightControllerSpy_GetLastState());
 }
 
 void test_LightControllerSpy_RememberAllLightStates(void)
 {
-    LightController_On(0);
-    LightController_Off(31);
+    LightControllerSpy_On(0);
+    LightControllerSpy_Off(31);
     TEST_ASSERT_EQUAL(LIGHT_ON, LightControllerSpy_GetLightState(0));
     TEST_ASSERT_EQUAL(LIGHT_OFF, LightControllerSpy_GetLightState(31));
 }

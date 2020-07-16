@@ -18,7 +18,7 @@ void LightController_Deinit(void)
 {
 }
 
-int8_t LightController_On(int id)
+int8_t LightControllerSpy_On(int id)
 {
     if (isIdOutOfBounds(id))
         return LIGHT_ID_UNKNOWN;
@@ -30,7 +30,7 @@ int8_t LightController_On(int id)
     return LIGHT_ID_OK;
 }
 
-int8_t LightController_Off(int id)
+int8_t LightControllerSpy_Off(int id)
 {
     if (isIdOutOfBounds(id))
         return LIGHT_ID_UNKNOWN;
@@ -56,7 +56,7 @@ int LightControllerSpy_GetLightState(int id)
 {
     if (isIdOutOfBounds(id))
         return LIGHT_ID_UNKNOWN;
-        
+
     return lightState[id];
 }
 

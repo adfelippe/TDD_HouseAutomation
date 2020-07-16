@@ -24,18 +24,24 @@
 /*-    www.renaissancesoftware.net james@renaissancesoftware.net       -*/
 /*- ------------------------------------------------------------------ -*/
 
+#ifndef D_LightDriverSpy_H
+#define D_LightDriverSpy_H
 
-#ifndef D_LightController_H
-#define D_LightController_H
-
-#include <stdint.h>
-#include <stdbool.h>
 #include "LightDriver.h"
+#include "LightController.h"
 
-void LightController_Create(void);
-void LightController_Destroy(void);
-void LightController_On(int id);
-void LightController_Off(int id);
-bool LightController_Add(int id, LightDriver lightDriver);
+LightDriver LightDriverSpy_Create(int id);
+void LightDriverSpy_Destroy(LightDriver);
+void LightDriverSpy_TurnOn(LightDriver);
+void LightDriverSpy_TurnOff(LightDriver);
+void LightDriverSpy_InstallInterface(void);
 
-#endif  /* D_LightController_H */
+/* Functions just needed by the spy */
+void LightDriverSpy_Reset(void);
+int LightDriverSpy_GetState(int id);
+int LightDriverSpy_GetLastId(void);
+int LightDriverSpy_GetLastState(void);
+void LightDriverSpy_AddSpiesToController(void);
+
+
+#endif  /* D_LightDriverSpy_H */

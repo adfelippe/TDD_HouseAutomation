@@ -24,18 +24,20 @@
 /*-    www.renaissancesoftware.net james@renaissancesoftware.net       -*/
 /*- ------------------------------------------------------------------ -*/
 
+#ifndef D_LightDriverPrivate_H
+#define D_LightDriverPrivate_H
 
-#ifndef D_LightController_H
-#define D_LightController_H
+typedef struct LightDriverStruct
+{
+    const char * type;
+    int id;
+} LightDriverStruct;
 
-#include <stdint.h>
-#include <stdbool.h>
-#include "LightDriver.h"
+typedef struct LightDriverInterfaceStruct
+{
+    void (*TurnOn)(LightDriver);
+    void (*TurnOff)(LightDriver);
+    void (*Destroy)(LightDriver);
+} LightDriverInterfaceStruct;
 
-void LightController_Create(void);
-void LightController_Destroy(void);
-void LightController_On(int id);
-void LightController_Off(int id);
-bool LightController_Add(int id, LightDriver lightDriver);
-
-#endif  /* D_LightController_H */
+#endif  /* D_LightDriverPrivate_H */

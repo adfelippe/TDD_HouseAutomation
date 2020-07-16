@@ -1,17 +1,23 @@
 #include "unity.h"
 #include "LightScheduler.h"
 #include "LightControllerSpy.h"
+#include "LightController.h"
+#include "LightDriverSpy.h"
+#include "LightDriver.h"
 #include "FakeTimeService.h"
 
 void setUp(void)
 {
-    LightController_Init();
+    LightController_Create();
+    LightDriverSpy_AddSpiesToController();
+    LightDriverSpy_InstallInterface();
+    LightDriverSpy_Reset();
     LightScheduler_Init();
 }
 
 void tearDown(void)
 {
-    LightController_Deinit();
+    LightController_Destroy();
     LightScheduler_Deinit();
 }
 
@@ -24,11 +30,16 @@ void setTimeTo(int day, int minuteOfDay)
 void checkLightState(int id, int state)
 {
     if (id == LIGHT_ID_UNKNOWN) {
-        TEST_ASSERT_EQUAL(id, LightControllerSpy_GetLastId());
-        TEST_ASSERT_EQUAL(state, LightControllerSpy_GetLastState());
+        TEST_ASSERT_EQUAL(id, LightDriverSpy_GetLastId());
+        TEST_ASSERT_EQUAL(state, LightDriverSpy_GetLastState());
     } else {
-        TEST_ASSERT_EQUAL(state, LightControllerSpy_GetLightState(id));
+        TEST_ASSERT_EQUAL(state, LightDriverSpy_GetState(id));
     }
+}
+
+void test_LightScheduler_NoChangeToLightsDuringInitialization(void)
+{
+    checkLightState(LIGHT_ID_UNKNOWN, LIGHT_STATE_UNKNOWN);
 }
 
 void test_LightScheduler_InitStartsOneMinuteAlarm(void)
@@ -42,11 +53,6 @@ void test_LightScheduler_DeinitCancelsOneMinuteAlarm(void)
     LightScheduler_Deinit();
     TEST_ASSERT_NULL((void*)FakeTimeService_GetAlarmCallback());
     TEST_ASSERT_EQUAL(0, FakeTimeService_GetAlarmPeriod());
-}
-
-void test_LightScheduler_NoChangeToLightsDuringInitialization(void)
-{
-    checkLightState(LIGHT_ID_UNKNOWN, LIGHT_STATE_UNKNOWN);
 }
 
 void test_LightScheduler_ScheduleOnEverydayNotTimeYet(void)
