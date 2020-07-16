@@ -28,15 +28,18 @@
 #ifndef D_LightController_H
 #define D_LightController_H
 
+#include <stdint.h>
+#include <stdbool.h>
+
 enum { MAX_LIGHTS = 32 };
-enum { LIGHT_ID_UNKNOWN = -1, LIGHT_STATE_UNKNOWN = -1 };
+enum { LIGHT_ID_UNKNOWN = -1, LIGHT_STATE_UNKNOWN = -1, LIGHT_ID_OK = 0 };
 enum { LIGHT_OFF = 0, LIGHT_ON = 1 };
 enum { TURN_OFF = 0, TURN_ON = 1 };
 enum { UNUSED = 0 };
 
 void LightController_Init(void);
 void LightController_Deinit(void);
-void LightController_On(int id);
-void LightController_Off(int id);
+int8_t LightController_On(int id);
+int8_t LightController_Off(int id);
 
 #endif  /* D_LightController_H */

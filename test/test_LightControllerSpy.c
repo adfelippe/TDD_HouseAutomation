@@ -34,3 +34,9 @@ void test_LightControllerSpy_RememberAllLightStates(void)
     TEST_ASSERT_EQUAL(LIGHT_ON, LightControllerSpy_GetLightState(0));
     TEST_ASSERT_EQUAL(LIGHT_OFF, LightControllerSpy_GetLightState(31));
 }
+
+void test_LightControllerSpy_GetLightStateRejectsIdOutOfBounds(void)
+{
+    TEST_ASSERT_EQUAL(LIGHT_ID_UNKNOWN, LightControllerSpy_GetLightState(-1));
+    TEST_ASSERT_EQUAL(LIGHT_ID_UNKNOWN, LightControllerSpy_GetLightState(33));
+}

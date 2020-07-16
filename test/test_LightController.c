@@ -58,3 +58,25 @@ void test_LightControllerTurnsOffMultipleLightsSuccessfully(void)
     TEST_ASSERT_EQUAL(LIGHT_OFF, LightControllerSpy_GetLightState(7));
     TEST_ASSERT_EQUAL(LIGHT_OFF, LightControllerSpy_GetLightState(13));
 }
+
+void test_LightController_TurnOnRejectsLightIdOutOfBounds(void)
+{
+    TEST_ASSERT_EQUAL(LIGHT_ID_UNKNOWN, LightController_On(-1));
+    TEST_ASSERT_EQUAL(LIGHT_ID_UNKNOWN, LightController_On(33));
+}
+
+void test_LightController_TurnOffRejectsLightIdOutOfBounds(void)
+{
+    TEST_ASSERT_EQUAL(LIGHT_ID_UNKNOWN, LightController_Off(-1));
+    TEST_ASSERT_EQUAL(LIGHT_ID_UNKNOWN, LightController_Off(33));
+}
+
+void test_LightController_TurnOnReturnsZeroWhenIdIsValid(void)
+{
+    TEST_ASSERT_EQUAL(LIGHT_ID_OK, LightController_On(5));
+}
+
+void test_LightController_TurnOffReturnsZeroWhenIdIsValid(void)
+{
+    TEST_ASSERT_EQUAL(LIGHT_ID_OK, LightController_Off(5));
+}
