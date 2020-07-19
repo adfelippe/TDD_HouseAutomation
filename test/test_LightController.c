@@ -2,6 +2,7 @@
 #include "LightDriverSpy.h"
 #include "LightDriver.h"
 #include "LightController.h"
+#include "CountingLightDriver.h"
 
 
 void setUp(void)
@@ -74,6 +75,19 @@ void test_LightController_AddingDriverDestroysPrevious(void)
     LightDriver spy = LightDriverSpy_Create(1);
     LightController_Add(1, spy);
     LightController_Destroy();
+}
+
+void test_LightController_TurnOnDifferentDriverTypes(void)
+{
+    LightDriver otherDriver = CountingLightDriver_Create(5);
+    LightController_Add(5, otherDriver);
+
+    LightController_On(7);
+    LightController_On(5);
+    LightController_Off(5);
+
+    TEST_ASSERT_EQUAL(LIGHT_ON, LightDriverSpy_GetState(7));
+    TEST_ASSERT_EQUAL(2, CountingLightDriver_GetCallCount(otherDriver));
 }
 
 #if 0

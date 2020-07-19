@@ -14,6 +14,7 @@ LightDriverInterfaceStruct interface =
 
 LightDriverStruct testDriver =
 {
+    &interface,
     "testDriver",
     13
 };

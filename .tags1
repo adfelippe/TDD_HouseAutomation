@@ -4,24 +4,9 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-id	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int id;$/;"	member	line:8	struct:__anon1	file:
-day	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int day;$/;"	member	line:9	struct:__anon1	file:
-minuteOfDay	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int minuteOfDay;$/;"	member	line:10	struct:__anon1	file:
-event	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int event;$/;"	member	line:11	struct:__anon1	file:
-ScheduledLightEvent	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^} ScheduledLightEvent;$/;"	typedef	line:12	typeref:struct:__anon1	file:
-RandomMinute_Get	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^int (*RandomMinute_Get)(void);$/;"	variable	line:14
-scheduledEvents	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static ScheduledLightEvent scheduledEvents[MAX_EVENTS];$/;"	variable	line:16	file:
-LightScheduler_Init	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Init(void)$/;"	function	line:27	signature:(void)
-LightScheduler_Deinit	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Deinit(void)$/;"	function	line:35	signature:(void)
-LightScheduler_ScheduleTurnOn	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^int LightScheduler_ScheduleTurnOn(int id, int day, int minuteOfDay)$/;"	function	line:40	signature:(int id, int day, int minuteOfDay)
-LightScheduler_ScheduleTurnOff	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^int LightScheduler_ScheduleTurnOff(int id, int day, int minuteOfDay)$/;"	function	line:45	signature:(int id, int day, int minuteOfDay)
-LightScheduler_Randomize	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Randomize(int id, int day, int minuteOfDay)$/;"	function	line:50	signature:(int id, int day, int minuteOfDay)
-LightScheduler_ScheduleRemove	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_ScheduleRemove(int id, int day, int minuteOfDay)$/;"	function	line:62	signature:(int id, int day, int minuteOfDay)
-LightScheduler_Wakeup	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Wakeup(void)$/;"	function	line:70	signature:(void)
-scheduleEvent	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static int scheduleEvent(int id, int day, int minuteOfDay, int event)$/;"	function	line:79	file:	signature:(int id, int day, int minuteOfDay, int event)
-processEventDueNow	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static void processEventDueNow(Time *time, ScheduledLightEvent *lightEvent)$/;"	function	line:100	file:	signature:(Time *time, ScheduledLightEvent *lightEvent)
-operateLight	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static void operateLight(ScheduledLightEvent *lightEvent)$/;"	function	line:116	file:	signature:(ScheduledLightEvent *lightEvent)
-DoesLightRespondToday	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static bool DoesLightRespondToday(Time *time, int reactionDay)$/;"	function	line:124	file:	signature:(Time *time, int reactionDay)
-isEventScheduled	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static bool isEventScheduled(int i, int id, int day, int minuteOfDay)$/;"	function	line:140	file:	signature:(int i, int id, int day, int minuteOfDay)
-isIdOutOfBounds	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static bool isIdOutOfBounds(int id)$/;"	function	line:147	file:	signature:(int id)
-fixRandomizedTimeFromMidnightOffset	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static void fixRandomizedTimeFromMidnightOffset(int i)$/;"	function	line:152	file:	signature:(int i)
+interface	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^static LightDriverInterface interface = NULL;$/;"	variable	line:5	file:
+LightDriver_SetInterface	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^void LightDriver_SetInterface(LightDriverInterface i)$/;"	function	line:10	signature:(LightDriverInterface i)
+LightDriver_TurnOn	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^void LightDriver_TurnOn(LightDriver driver)$/;"	function	line:15	signature:(LightDriver driver)
+LightDriver_TurnOff	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^void LightDriver_TurnOff(LightDriver driver)$/;"	function	line:21	signature:(LightDriver driver)
+LightDriver_Destroy	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^void LightDriver_Destroy(LightDriver driver)$/;"	function	line:27	signature:(LightDriver driver)
+isDriverValid	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^static bool isDriverValid(LightDriver self)$/;"	function	line:33	file:	signature:(LightDriver self)

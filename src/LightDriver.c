@@ -15,19 +15,19 @@ void LightDriver_SetInterface(LightDriverInterface i)
 void LightDriver_TurnOn(LightDriver driver)
 {
     if (isDriverValid(driver))
-        interface->TurnOn(driver);
+        driver->vtable->TurnOn(driver);
 }
 
 void LightDriver_TurnOff(LightDriver driver)
 {
     if (isDriverValid(driver))
-        interface->TurnOff(driver);
+        driver->vtable->TurnOff(driver);
 }
 
 void LightDriver_Destroy(LightDriver driver)
 {
     if (isDriverValid(driver))
-        interface->Destroy(driver);
+        driver->vtable->Destroy(driver);
 }
 
 static bool isDriverValid(LightDriver self)

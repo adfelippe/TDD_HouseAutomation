@@ -44,9 +44,9 @@ typedef enum  LightDriverType
     MemoryMapped
  } LightDriverType;
 
-typedef struct LightDriverStruct * LightDriver;
+typedef struct LightDriverStruct *LightDriver;
 
-typedef struct LightDriverInterfaceStruct * LightDriverInterface;
+typedef struct LightDriverInterfaceStruct *LightDriverInterface;
 
 void LightDriver_SetInterface(LightDriverInterface);
 void LightDriver_Destroy(LightDriver);

@@ -75,6 +75,7 @@ void LightDriverSpy_AddSpiesToController(void)
 LightDriver LightDriverSpy_Create(int id)
 {
     LightDriverSpy self = calloc(1, sizeof(LightDriverSpyStruct));
+    self->base.vtable = &interface;
     self->base.type = TestLightDriver;
     self->base.id = id;
     return (LightDriver)self;
