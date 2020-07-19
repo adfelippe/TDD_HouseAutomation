@@ -52,9 +52,10 @@ void LightScheduler_Randomize(int id, int day, int minuteOfDay)
     int randomMinute = RandomMinute_Get();
 
     for (int i = 0; i < MAX_EVENTS; i++) {
-        if (isEventScheduled(i, id, day, minuteOfDay))
+        if (isEventScheduled(i, id, day, minuteOfDay)) {
                 scheduledEvents[i].minuteOfDay += randomMinute;
                 fixRandomizedTimeFromMidnightOffset(i);
+        }
     }
 }
 

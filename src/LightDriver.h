@@ -27,6 +27,8 @@
 #ifndef D_LightDriver_H
 #define D_LightDriver_H
 
+#include <stdint.h>
+
 
 enum { MAX_LIGHTS = 32 };
 enum { LIGHT_ID_UNKNOWN = -1, LIGHT_STATE_UNKNOWN = -1, LIGHT_ID_OK = 0 };
@@ -48,8 +50,8 @@ typedef struct LightDriverInterfaceStruct * LightDriverInterface;
 
 void LightDriver_SetInterface(LightDriverInterface);
 void LightDriver_Destroy(LightDriver);
-int8_t LightDriver_TurnOn(LightDriver);
-int8_t LightDriver_TurnOff(LightDriver);
+void LightDriver_TurnOn(LightDriver);
+void LightDriver_TurnOff(LightDriver);
 const char * LightDriver_GetType(LightDriver);
 int LightDriver_GetId(LightDriver);
 

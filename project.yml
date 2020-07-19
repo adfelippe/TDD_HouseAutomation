@@ -40,6 +40,14 @@
     - test/support
   :libraries: []
 
+# Compilation flags
+:flags:
+  :test:
+    :compile:
+      :*:
+        - -std=c99
+        - -Wall
+
 :defines:
   # in order to add common defines:
   #  1) remove the trailing [] from the :common: section

@@ -1,6 +1,5 @@
 #include "unity.h"
 #include "LightScheduler.h"
-#include "LightControllerSpy.h"
 #include "LightController.h"
 #include "LightDriverSpy.h"
 #include "LightDriver.h"

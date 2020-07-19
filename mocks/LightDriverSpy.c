@@ -38,9 +38,9 @@ typedef struct LightDriverSpyStruct
 
 static LightDriverInterfaceStruct interface =
 {
-    LightDriverSpy_TurnOn,
-    LightDriverSpy_TurnOff,
-    LightDriverSpy_Destroy
+    .TurnOn = LightDriverSpy_TurnOn,
+    .TurnOff = LightDriverSpy_TurnOff,
+    .Destroy = LightDriverSpy_Destroy
 };
 
 static int states[MAX_LIGHTS];
@@ -52,7 +52,7 @@ void LightDriverSpy_Reset(void)
     for (int i = 0; i < MAX_LIGHTS; i++){
         states[i] = LIGHT_STATE_UNKNOWN;
     }
-    
+
     lastId = LIGHT_ID_UNKNOWN;
     lastState = LIGHT_STATE_UNKNOWN;
 }
@@ -84,13 +84,6 @@ void LightDriverSpy_Destroy(LightDriver base)
 {
     LightDriverSpy self = (LightDriverSpy)base;
     free(self);
-}
-
-static void save(int id, int state)
-{
-    states[id] = state;
-    lastId = id;
-    lastState = state;
 }
 
 void LightDriverSpy_TurnOn(LightDriver base)

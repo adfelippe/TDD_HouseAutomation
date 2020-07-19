@@ -26,7 +26,6 @@
 
 #include "FakeTimeService.h"
 
-static Time fakeTime;
 static WakeupCallback callback;
 static int theMinute;
 static int theDay;

@@ -1,6 +1,5 @@
 #include "unity.h"
 #include "LightDriverSpy.h"
-#include "LightDriverSpy.h"
 #include "LightDriver.h"
 #include "LightController.h"
 
@@ -46,7 +45,7 @@ void test_LightController_WrongLightIdReturnsDifferentState(void)
     TEST_ASSERT_NOT_EQUAL(LIGHT_ON, LightDriverSpy_GetState(10));
 }
 
-void test_LightControllerTurnsOnMultipleLightsSuccessfully(void)
+void test_LightController_TurnsOnMultipleLightsSuccessfully(void)
 {
     LightController_On(7);
     LightController_On(13);
@@ -54,7 +53,7 @@ void test_LightControllerTurnsOnMultipleLightsSuccessfully(void)
     TEST_ASSERT_EQUAL(LIGHT_ON, LightDriverSpy_GetState(13));
 }
 
-void test_LightControllerTurnsOffMultipleLightsSuccessfully(void)
+void test_LightController_TurnsOffMultipleLightsSuccessfully(void)
 {
     LightController_On(7);
     LightController_On(13);
@@ -62,6 +61,19 @@ void test_LightControllerTurnsOffMultipleLightsSuccessfully(void)
     LightController_Off(13);
     TEST_ASSERT_EQUAL(LIGHT_OFF, LightDriverSpy_GetState(7));
     TEST_ASSERT_EQUAL(LIGHT_OFF, LightDriverSpy_GetState(13));
+}
+
+void test_LightController_RejectsToAddOutOfBoundController(void)
+{
+    TEST_ASSERT_EQUAL(false, LightController_Add(-1, TestLightDriver));
+    TEST_ASSERT_EQUAL(false, LightController_Add(33, TestLightDriver));
+}
+
+void test_LightController_AddingDriverDestroysPrevious(void)
+{
+    LightDriver spy = LightDriverSpy_Create(1);
+    LightController_Add(1, spy);
+    LightController_Destroy();
 }
 
 #if 0

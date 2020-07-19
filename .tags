@@ -47,6 +47,22 @@ test_LightScheduler_RemoveMultipleScheduleEvent	D:\workspace\TDD_HouseAutomation
 test_LightScheduler_AcceptsValidLightIds	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightScheduler.c	/^void test_LightScheduler_AcceptsValidLightIds(void)$/;"	function	line:404	signature:(void)
 test_LightScheduler_RejectsInvalidLightIds	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightScheduler.c	/^void test_LightScheduler_RejectsInvalidLightIds(void)$/;"	function	line:430	signature:(void)
 test_LightScheduler_RejectsInvalidTimeAfterMidnight	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightScheduler.c	/^void test_LightScheduler_RejectsInvalidTimeAfterMidnight(void)$/;"	function	line:450	signature:(void)
+savedRandomMinute_Get	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightSchedulerRandomize.c	/^int (*savedRandomMinute_Get)(void);$/;"	variable	line:11
+RandomMinute_Get	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightSchedulerRandomize.c	/^int (*RandomMinute_Get)(void);$/;"	variable	line:13
+setUp	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightSchedulerRandomize.c	/^void setUp(void)$/;"	function	line:17	signature:(void)
+tearDown	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightSchedulerRandomize.c	/^void tearDown(void)$/;"	function	line:33	signature:(void)
+setTimeTo	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightSchedulerRandomize.c	/^void setTimeTo(int day, int minuteOfDay)$/;"	function	line:47	signature:(int day, int minuteOfDay)
+checkLightState	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightSchedulerRandomize.c	/^void checkLightState(int id, int state)$/;"	function	line:59	signature:(int id, int state)
+test_LightSchedulerRandomize_TurnsOnEarly	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightSchedulerRandomize.c	/^void test_LightSchedulerRandomize_TurnsOnEarly(void)$/;"	function	line:91	signature:(void)
+test_LightSchedulerRandomize_TurnsOnLater	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightSchedulerRandomize.c	/^void test_LightSchedulerRandomize_TurnsOnLater(void)$/;"	function	line:117	signature:(void)
+test_LightSchedulerRandomize_TurnsOnAfterMidnightWhenSetBeforeMidnight	D:\workspace\TDD_HouseAutomation\build\test\cache\test_LightSchedulerRandomize.c	/^void test_LightSchedulerRandomize_TurnsOnAfterMidnightWhenSetBeforeMidnight(void)$/;"	function	line:143	signature:(void)
+BOUND	D:\workspace\TDD_HouseAutomation\build\test\cache\test_RandomMinute.c	/^enum {BOUND = 30};$/;"	enumerator	line:8	enum:__anon1	file:
+minute	D:\workspace\TDD_HouseAutomation\build\test\cache\test_RandomMinute.c	/^int minute;$/;"	variable	line:12
+setUp	D:\workspace\TDD_HouseAutomation\build\test\cache\test_RandomMinute.c	/^void setUp(void)$/;"	function	line:16	signature:(void)
+tearDown	D:\workspace\TDD_HouseAutomation\build\test\cache\test_RandomMinute.c	/^void tearDown(void)$/;"	function	line:26	signature:(void)
+AssetMinuteIsInRange	D:\workspace\TDD_HouseAutomation\build\test\cache\test_RandomMinute.c	/^void AssetMinuteIsInRange(void)$/;"	function	line:34	signature:(void)
+test_RandomMinute_GetIsInRange	D:\workspace\TDD_HouseAutomation\build\test\cache\test_RandomMinute.c	/^void test_RandomMinute_GetIsInRange(void)$/;"	function	line:50	signature:(void)
+test_RandomMinute_AllPossibleValues	D:\workspace\TDD_HouseAutomation\build\test\cache\test_RandomMinute.c	/^void test_RandomMinute_AllPossibleValues(void)$/;"	function	line:66	signature:(void)
 setUp	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_FakeTimeService.c	/^void setUp(void)$/;"	function	line:6	signature:(void)
 tearDown	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_FakeTimeService.c	/^void tearDown(void)$/;"	function	line:16	signature:(void)
 test_FakeTimeService_Create	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_FakeTimeService.c	/^void test_FakeTimeService_Create(void)$/;"	function	line:24	signature:(void)
@@ -85,6 +101,22 @@ test_LightScheduler_RemoveMultipleScheduleEvent	D:\workspace\TDD_HouseAutomation
 test_LightScheduler_AcceptsValidLightIds	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightScheduler.c	/^void test_LightScheduler_AcceptsValidLightIds(void)$/;"	function	line:404	signature:(void)
 test_LightScheduler_RejectsInvalidLightIds	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightScheduler.c	/^void test_LightScheduler_RejectsInvalidLightIds(void)$/;"	function	line:430	signature:(void)
 test_LightScheduler_RejectsInvalidTimeAfterMidnight	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightScheduler.c	/^void test_LightScheduler_RejectsInvalidTimeAfterMidnight(void)$/;"	function	line:450	signature:(void)
+savedRandomMinute_Get	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightSchedulerRandomize.c	/^int (*savedRandomMinute_Get)(void);$/;"	variable	line:11
+RandomMinute_Get	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightSchedulerRandomize.c	/^int (*RandomMinute_Get)(void);$/;"	variable	line:13
+setUp	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightSchedulerRandomize.c	/^void setUp(void)$/;"	function	line:17	signature:(void)
+tearDown	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightSchedulerRandomize.c	/^void tearDown(void)$/;"	function	line:33	signature:(void)
+setTimeTo	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightSchedulerRandomize.c	/^void setTimeTo(int day, int minuteOfDay)$/;"	function	line:47	signature:(int day, int minuteOfDay)
+checkLightState	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightSchedulerRandomize.c	/^void checkLightState(int id, int state)$/;"	function	line:59	signature:(int id, int state)
+test_LightSchedulerRandomize_TurnsOnEarly	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightSchedulerRandomize.c	/^void test_LightSchedulerRandomize_TurnsOnEarly(void)$/;"	function	line:91	signature:(void)
+test_LightSchedulerRandomize_TurnsOnLater	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightSchedulerRandomize.c	/^void test_LightSchedulerRandomize_TurnsOnLater(void)$/;"	function	line:117	signature:(void)
+test_LightSchedulerRandomize_TurnsOnAfterMidnightWhenSetBeforeMidnight	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_LightSchedulerRandomize.c	/^void test_LightSchedulerRandomize_TurnsOnAfterMidnightWhenSetBeforeMidnight(void)$/;"	function	line:143	signature:(void)
+BOUND	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_RandomMinute.c	/^enum {BOUND = 30};$/;"	enumerator	line:8	enum:__anon2	file:
+minute	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_RandomMinute.c	/^int minute;$/;"	variable	line:12
+setUp	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_RandomMinute.c	/^void setUp(void)$/;"	function	line:16	signature:(void)
+tearDown	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_RandomMinute.c	/^void tearDown(void)$/;"	function	line:26	signature:(void)
+AssetMinuteIsInRange	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_RandomMinute.c	/^void AssetMinuteIsInRange(void)$/;"	function	line:34	signature:(void)
+test_RandomMinute_GetIsInRange	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_RandomMinute.c	/^void test_RandomMinute_GetIsInRange(void)$/;"	function	line:50	signature:(void)
+test_RandomMinute_AllPossibleValues	D:\workspace\TDD_HouseAutomation\build\test\preprocess\files\test_RandomMinute.c	/^void test_RandomMinute_AllPossibleValues(void)$/;"	function	line:66	signature:(void)
 GlobalExpectCount	D:\workspace\TDD_HouseAutomation\build\test\runners\test_FakeTimeService_runner.c	/^int GlobalExpectCount;$/;"	variable	line:6
 GlobalVerifyOrder	D:\workspace\TDD_HouseAutomation\build\test\runners\test_FakeTimeService_runner.c	/^int GlobalVerifyOrder;$/;"	variable	line:7
 GlobalOrderError	D:\workspace\TDD_HouseAutomation\build\test\runners\test_FakeTimeService_runner.c	/^char* GlobalOrderError;$/;"	variable	line:8
@@ -105,6 +137,16 @@ resetTest	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightControll
 verifyTest	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightControllerSpy_runner.c	/^void verifyTest(void)$/;"	function	line:43	signature:(void)
 run_test	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightControllerSpy_runner.c	/^static void run_test(UnityTestFunction func, const char* name, int line_num)$/;"	function	line:49	file:	signature:(UnityTestFunction func, const char* name, int line_num)
 main	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightControllerSpy_runner.c	/^int main(void)$/;"	function	line:77	signature:(void)
+GlobalExpectCount	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightSchedulerRandomize_runner.c	/^int GlobalExpectCount;$/;"	variable	line:6
+GlobalVerifyOrder	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightSchedulerRandomize_runner.c	/^int GlobalVerifyOrder;$/;"	variable	line:7
+GlobalOrderError	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightSchedulerRandomize_runner.c	/^char* GlobalOrderError;$/;"	variable	line:8
+CMock_Init	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightSchedulerRandomize_runner.c	/^static void CMock_Init(void)$/;"	function	line:19	file:	signature:(void)
+CMock_Verify	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightSchedulerRandomize_runner.c	/^static void CMock_Verify(void)$/;"	function	line:25	file:	signature:(void)
+CMock_Destroy	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightSchedulerRandomize_runner.c	/^static void CMock_Destroy(void)$/;"	function	line:28	file:	signature:(void)
+resetTest	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightSchedulerRandomize_runner.c	/^void resetTest(void)$/;"	function	line:34	signature:(void)
+verifyTest	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightSchedulerRandomize_runner.c	/^void verifyTest(void)$/;"	function	line:43	signature:(void)
+run_test	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightSchedulerRandomize_runner.c	/^static void run_test(UnityTestFunction func, const char* name, int line_num)$/;"	function	line:49	file:	signature:(UnityTestFunction func, const char* name, int line_num)
+main	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightSchedulerRandomize_runner.c	/^int main(void)$/;"	function	line:77	signature:(void)
 GlobalExpectCount	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightScheduler_runner.c	/^int GlobalExpectCount;$/;"	variable	line:6
 GlobalVerifyOrder	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightScheduler_runner.c	/^int GlobalVerifyOrder;$/;"	variable	line:7
 GlobalOrderError	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightScheduler_runner.c	/^char* GlobalOrderError;$/;"	variable	line:8
@@ -115,6 +157,16 @@ resetTest	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightSchedule
 verifyTest	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightScheduler_runner.c	/^void verifyTest(void)$/;"	function	line:61	signature:(void)
 run_test	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightScheduler_runner.c	/^static void run_test(UnityTestFunction func, const char* name, int line_num)$/;"	function	line:67	file:	signature:(UnityTestFunction func, const char* name, int line_num)
 main	D:\workspace\TDD_HouseAutomation\build\test\runners\test_LightScheduler_runner.c	/^int main(void)$/;"	function	line:95	signature:(void)
+GlobalExpectCount	D:\workspace\TDD_HouseAutomation\build\test\runners\test_RandomMinute_runner.c	/^int GlobalExpectCount;$/;"	variable	line:6
+GlobalVerifyOrder	D:\workspace\TDD_HouseAutomation\build\test\runners\test_RandomMinute_runner.c	/^int GlobalVerifyOrder;$/;"	variable	line:7
+GlobalOrderError	D:\workspace\TDD_HouseAutomation\build\test\runners\test_RandomMinute_runner.c	/^char* GlobalOrderError;$/;"	variable	line:8
+CMock_Init	D:\workspace\TDD_HouseAutomation\build\test\runners\test_RandomMinute_runner.c	/^static void CMock_Init(void)$/;"	function	line:18	file:	signature:(void)
+CMock_Verify	D:\workspace\TDD_HouseAutomation\build\test\runners\test_RandomMinute_runner.c	/^static void CMock_Verify(void)$/;"	function	line:24	file:	signature:(void)
+CMock_Destroy	D:\workspace\TDD_HouseAutomation\build\test\runners\test_RandomMinute_runner.c	/^static void CMock_Destroy(void)$/;"	function	line:27	file:	signature:(void)
+resetTest	D:\workspace\TDD_HouseAutomation\build\test\runners\test_RandomMinute_runner.c	/^void resetTest(void)$/;"	function	line:33	signature:(void)
+verifyTest	D:\workspace\TDD_HouseAutomation\build\test\runners\test_RandomMinute_runner.c	/^void verifyTest(void)$/;"	function	line:42	signature:(void)
+run_test	D:\workspace\TDD_HouseAutomation\build\test\runners\test_RandomMinute_runner.c	/^static void run_test(UnityTestFunction func, const char* name, int line_num)$/;"	function	line:48	file:	signature:(UnityTestFunction func, const char* name, int line_num)
+main	D:\workspace\TDD_HouseAutomation\build\test\runners\test_RandomMinute_runner.c	/^int main(void)$/;"	function	line:76	signature:(void)
 seed	D:\workspace\TDD_HouseAutomation\mocks\FakeRandomMinute.c	/^static int seed = -1;$/;"	variable	line:29	file:
 increment	D:\workspace\TDD_HouseAutomation\mocks\FakeRandomMinute.c	/^static int increment = -1;$/;"	variable	line:30	file:
 FakeRandomMinute_Reset	D:\workspace\TDD_HouseAutomation\mocks\FakeRandomMinute.c	/^void FakeRandomMinute_Reset(void)$/;"	function	line:32	signature:(void)
@@ -138,79 +190,135 @@ TimeService_CancelPeriodicAlarmInSeconds	D:\workspace\TDD_HouseAutomation\mocks\
 FakeTimeService_GetAlarmCallback	D:\workspace\TDD_HouseAutomation\mocks\FakeTimeService.c	/^WakeupCallback FakeTimeService_GetAlarmCallback(void)$/;"	function	line:85	signature:(void)
 FakeTimeService_GetAlarmPeriod	D:\workspace\TDD_HouseAutomation\mocks\FakeTimeService.c	/^int FakeTimeService_GetAlarmPeriod(void)$/;"	function	line:90	signature:(void)
 D_FakeTimeService_H	D:\workspace\TDD_HouseAutomation\mocks\FakeTimeService.h	/^#define D_FakeTimeService_H$/;"	macro	line:29
-MINUTE_UNKNOWN	D:\workspace\TDD_HouseAutomation\mocks\FakeTimeService.h	/^enum {MINUTE_UNKNOWN = -1, DAY_UNKNOWN = -1 };$/;"	enumerator	line:39	enum:__anon1
-DAY_UNKNOWN	D:\workspace\TDD_HouseAutomation\mocks\FakeTimeService.h	/^enum {MINUTE_UNKNOWN = -1, DAY_UNKNOWN = -1 };$/;"	enumerator	line:39	enum:__anon1
+MINUTE_UNKNOWN	D:\workspace\TDD_HouseAutomation\mocks\FakeTimeService.h	/^enum {MINUTE_UNKNOWN = -1, DAY_UNKNOWN = -1 };$/;"	enumerator	line:39	enum:__anon3
+DAY_UNKNOWN	D:\workspace\TDD_HouseAutomation\mocks\FakeTimeService.h	/^enum {MINUTE_UNKNOWN = -1, DAY_UNKNOWN = -1 };$/;"	enumerator	line:39	enum:__anon3
 lastId	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^static int lastId;$/;"	variable	line:3	file:
 lastState	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^static int lastState;$/;"	variable	line:4	file:
 lightState	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^static int lightState[MAX_LIGHTS];$/;"	variable	line:5	file:
-LightController_Init	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^void LightController_Init(void)$/;"	function	line:7	signature:(void)
-LightController_Deinit	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^void LightController_Deinit(void)$/;"	function	line:14	signature:(void)
-LightController_On	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^void LightController_On(int id)$/;"	function	line:18	signature:(int id)
-LightController_Off	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^void LightController_Off(int id)$/;"	function	line:25	signature:(int id)
-LightControllerSpy_GetLastId	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^int LightControllerSpy_GetLastId(void)$/;"	function	line:32	signature:(void)
-LightControllerSpy_GetLastState	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^int LightControllerSpy_GetLastState(void)$/;"	function	line:37	signature:(void)
-LightControllerSpy_GetLightState	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^int LightControllerSpy_GetLightState(int id)$/;"	function	line:42	signature:(int id)
+LightController_Init	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^void LightController_Init(void)$/;"	function	line:10	signature:(void)
+LightController_Deinit	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^void LightController_Deinit(void)$/;"	function	line:17	signature:(void)
+LightControllerSpy_On	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^int8_t LightControllerSpy_On(int id)$/;"	function	line:21	signature:(int id)
+LightControllerSpy_Off	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^int8_t LightControllerSpy_Off(int id)$/;"	function	line:33	signature:(int id)
+LightControllerSpy_GetLastId	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^int LightControllerSpy_GetLastId(void)$/;"	function	line:45	signature:(void)
+LightControllerSpy_GetLastState	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^int LightControllerSpy_GetLastState(void)$/;"	function	line:50	signature:(void)
+LightControllerSpy_GetLightState	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^int LightControllerSpy_GetLightState(int id)$/;"	function	line:55	signature:(int id)
+isIdOutOfBounds	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.c	/^static bool isIdOutOfBounds(int id)$/;"	function	line:63	file:	signature:(int id)
 LIGHTCONTROLLERSPY_H	D:\workspace\TDD_HouseAutomation\mocks\LightControllerSpy.h	/^#define LIGHTCONTROLLERSPY_H$/;"	macro	line:2
+LightDriverSpy	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^typedef struct LightDriverSpyStruct * LightDriverSpy;$/;"	typedef	line:32	typeref:struct:LightDriverSpyStruct	file:
+LightDriverSpyStruct	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^typedef struct LightDriverSpyStruct$/;"	struct	line:34	file:
+base	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^    LightDriverStruct base;$/;"	member	line:36	struct:LightDriverSpyStruct	file:
+LightDriverSpyStruct	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^} LightDriverSpyStruct;$/;"	typedef	line:37	typeref:struct:LightDriverSpyStruct	file:
+interface	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^static LightDriverInterfaceStruct interface =$/;"	variable	line:39	file:
+states	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^static int states[MAX_LIGHTS];$/;"	variable	line:46	file:
+lastId	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^static int lastId;$/;"	variable	line:47	file:
+lastState	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^static int lastState;$/;"	variable	line:48	file:
+LightDriverSpy_Reset	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^void LightDriverSpy_Reset(void)$/;"	function	line:50	signature:(void)
+LightDriverSpy_InstallInterface	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^void LightDriverSpy_InstallInterface(void)$/;"	function	line:60	signature:(void)
+LightDriverSpy_AddSpiesToController	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^void LightDriverSpy_AddSpiesToController(void)$/;"	function	line:65	signature:(void)
+LightDriverSpy_Create	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^LightDriver LightDriverSpy_Create(int id)$/;"	function	line:75	signature:(int id)
+LightDriverSpy_Destroy	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^void LightDriverSpy_Destroy(LightDriver base)$/;"	function	line:83	signature:(LightDriver base)
+save	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^static void save(int id, int state)$/;"	function	line:89	file:	signature:(int id, int state)
+LightDriverSpy_TurnOn	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^void LightDriverSpy_TurnOn(LightDriver base)$/;"	function	line:96	signature:(LightDriver base)
+LightDriverSpy_TurnOff	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^void LightDriverSpy_TurnOff(LightDriver base)$/;"	function	line:104	signature:(LightDriver base)
+LightDriverSpy_GetState	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^int LightDriverSpy_GetState(int id)$/;"	function	line:112	signature:(int id)
+LightDriverSpy_GetLastId	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^int LightDriverSpy_GetLastId(void)$/;"	function	line:117	signature:(void)
+LightDriverSpy_GetLastState	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.c	/^int LightDriverSpy_GetLastState(void)$/;"	function	line:122	signature:(void)
+D_LightDriverSpy_H	D:\workspace\TDD_HouseAutomation\mocks\LightDriverSpy.h	/^#define D_LightDriverSpy_H$/;"	macro	line:28
 uint8	D:\workspace\TDD_HouseAutomation\project.yml	/^    uint8:    HEX8$/;"	function	line:63
 uint16	D:\workspace\TDD_HouseAutomation\project.yml	/^    uint16:   HEX16$/;"	function	line:64
 uint32	D:\workspace\TDD_HouseAutomation\project.yml	/^    uint32:   UINT32$/;"	function	line:65
 int8	D:\workspace\TDD_HouseAutomation\project.yml	/^    int8:     INT8$/;"	function	line:66
 bool	D:\workspace\TDD_HouseAutomation\project.yml	/^    bool:     UINT8$/;"	function	line:67
 TDD House Automation	D:\workspace\TDD_HouseAutomation\README.md	/^### TDD House Automation$/;"	function	line:1
+lightDrivers	D:\workspace\TDD_HouseAutomation\src\LightController.c	/^static LightDriver lightDrivers[MAX_LIGHTS] = { NULL };$/;"	variable	line:5	file:
+LightController_Create	D:\workspace\TDD_HouseAutomation\src\LightController.c	/^void LightController_Create(void)$/;"	function	line:8	signature:(void)
+LightController_Add	D:\workspace\TDD_HouseAutomation\src\LightController.c	/^bool LightController_Add(int id, LightDriver lightDriver)$/;"	function	line:13	signature:(int id, LightDriver lightDriver)
+LightController_Destroy	D:\workspace\TDD_HouseAutomation\src\LightController.c	/^void LightController_Destroy(void)$/;"	function	line:24	signature:(void)
+LightController_On	D:\workspace\TDD_HouseAutomation\src\LightController.c	/^void LightController_On(int id)$/;"	function	line:36	signature:(int id)
+LightController_Off	D:\workspace\TDD_HouseAutomation\src\LightController.c	/^void LightController_Off(int id)$/;"	function	line:41	signature:(int id)
 D_LightController_H	D:\workspace\TDD_HouseAutomation\src\LightController.h	/^#define D_LightController_H$/;"	macro	line:29
-MAX_LIGHTS	D:\workspace\TDD_HouseAutomation\src\LightController.h	/^enum { MAX_LIGHTS = 32 };$/;"	enumerator	line:31	enum:__anon2
-LIGHT_ID_UNKNOWN	D:\workspace\TDD_HouseAutomation\src\LightController.h	/^enum { LIGHT_ID_UNKNOWN = -1, LIGHT_STATE_UNKNOWN = -1 };$/;"	enumerator	line:32	enum:__anon3
-LIGHT_STATE_UNKNOWN	D:\workspace\TDD_HouseAutomation\src\LightController.h	/^enum { LIGHT_ID_UNKNOWN = -1, LIGHT_STATE_UNKNOWN = -1 };$/;"	enumerator	line:32	enum:__anon3
-LIGHT_OFF	D:\workspace\TDD_HouseAutomation\src\LightController.h	/^enum { LIGHT_OFF = 0, LIGHT_ON = 1 };$/;"	enumerator	line:33	enum:__anon4
-LIGHT_ON	D:\workspace\TDD_HouseAutomation\src\LightController.h	/^enum { LIGHT_OFF = 0, LIGHT_ON = 1 };$/;"	enumerator	line:33	enum:__anon4
-TURN_OFF	D:\workspace\TDD_HouseAutomation\src\LightController.h	/^enum { TURN_OFF = 0, TURN_ON = 1 };$/;"	enumerator	line:34	enum:__anon5
-TURN_ON	D:\workspace\TDD_HouseAutomation\src\LightController.h	/^enum { TURN_OFF = 0, TURN_ON = 1 };$/;"	enumerator	line:34	enum:__anon5
-UNUSED	D:\workspace\TDD_HouseAutomation\src\LightController.h	/^enum { UNUSED = 0 };$/;"	enumerator	line:35	enum:__anon6
-id	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int id;$/;"	member	line:8	struct:__anon7	file:
-day	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int day;$/;"	member	line:9	struct:__anon7	file:
-minuteOfDay	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int minuteOfDay;$/;"	member	line:10	struct:__anon7	file:
-event	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int event;$/;"	member	line:11	struct:__anon7	file:
-ScheduledLightEvent	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^} ScheduledLightEvent;$/;"	typedef	line:12	typeref:struct:__anon7	file:
+interface	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^static LightDriverInterface interface = NULL;$/;"	variable	line:5	file:
+LightDriver_SetInterface	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^void LightDriver_SetInterface(LightDriverInterface i)$/;"	function	line:10	signature:(LightDriverInterface i)
+LightDriver_TurnOn	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^void LightDriver_TurnOn(LightDriver driver)$/;"	function	line:15	signature:(LightDriver driver)
+LightDriver_TurnOff	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^void LightDriver_TurnOff(LightDriver driver)$/;"	function	line:21	signature:(LightDriver driver)
+LightDriver_Destroy	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^void LightDriver_Destroy(LightDriver driver)$/;"	function	line:27	signature:(LightDriver driver)
+isDriverValid	D:\workspace\TDD_HouseAutomation\src\LightDriver.c	/^static bool isDriverValid(LightDriver self)$/;"	function	line:33	file:	signature:(LightDriver self)
+D_LightDriver_H	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^#define D_LightDriver_H$/;"	macro	line:28
+MAX_LIGHTS	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^enum { MAX_LIGHTS = 32 };$/;"	enumerator	line:31	enum:__anon4
+LIGHT_ID_UNKNOWN	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^enum { LIGHT_ID_UNKNOWN = -1, LIGHT_STATE_UNKNOWN = -1, LIGHT_ID_OK = 0 };$/;"	enumerator	line:32	enum:__anon5
+LIGHT_STATE_UNKNOWN	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^enum { LIGHT_ID_UNKNOWN = -1, LIGHT_STATE_UNKNOWN = -1, LIGHT_ID_OK = 0 };$/;"	enumerator	line:32	enum:__anon5
+LIGHT_ID_OK	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^enum { LIGHT_ID_UNKNOWN = -1, LIGHT_STATE_UNKNOWN = -1, LIGHT_ID_OK = 0 };$/;"	enumerator	line:32	enum:__anon5
+LIGHT_OFF	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^enum { LIGHT_OFF = 0, LIGHT_ON = 1 };$/;"	enumerator	line:33	enum:__anon6
+LIGHT_ON	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^enum { LIGHT_OFF = 0, LIGHT_ON = 1 };$/;"	enumerator	line:33	enum:__anon6
+TURN_OFF	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^enum { TURN_OFF = 0, TURN_ON = 1 };$/;"	enumerator	line:34	enum:__anon7
+TURN_ON	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^enum { TURN_OFF = 0, TURN_ON = 1 };$/;"	enumerator	line:34	enum:__anon7
+UNUSED	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^enum { UNUSED = 0 };$/;"	enumerator	line:35	enum:__anon8
+LightDriverType	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^typedef enum  LightDriverType$/;"	enum	line:37
+TestLightDriver	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^    TestLightDriver,$/;"	enumerator	line:39	enum:LightDriverType
+X10	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^    X10,$/;"	enumerator	line:40	enum:LightDriverType
+AcmeWireless	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^    AcmeWireless,$/;"	enumerator	line:41	enum:LightDriverType
+MemoryMapped	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^    MemoryMapped$/;"	enumerator	line:42	enum:LightDriverType
+LightDriverType	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^ } LightDriverType;$/;"	typedef	line:43	typeref:enum:LightDriverType
+LightDriver	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^typedef struct LightDriverStruct * LightDriver;$/;"	typedef	line:45	typeref:struct:LightDriverStruct
+LightDriverInterface	D:\workspace\TDD_HouseAutomation\src\LightDriver.h	/^typedef struct LightDriverInterfaceStruct * LightDriverInterface;$/;"	typedef	line:47	typeref:struct:LightDriverInterfaceStruct
+D_LightDriverPrivate_H	D:\workspace\TDD_HouseAutomation\src\LightDriverPrivate.h	/^#define D_LightDriverPrivate_H$/;"	macro	line:28
+LightDriverStruct	D:\workspace\TDD_HouseAutomation\src\LightDriverPrivate.h	/^typedef struct LightDriverStruct$/;"	struct	line:30
+type	D:\workspace\TDD_HouseAutomation\src\LightDriverPrivate.h	/^    const char * type;$/;"	member	line:32	struct:LightDriverStruct
+id	D:\workspace\TDD_HouseAutomation\src\LightDriverPrivate.h	/^    int id;$/;"	member	line:33	struct:LightDriverStruct
+LightDriverStruct	D:\workspace\TDD_HouseAutomation\src\LightDriverPrivate.h	/^} LightDriverStruct;$/;"	typedef	line:34	typeref:struct:LightDriverStruct
+LightDriverInterfaceStruct	D:\workspace\TDD_HouseAutomation\src\LightDriverPrivate.h	/^typedef struct LightDriverInterfaceStruct$/;"	struct	line:36
+TurnOn	D:\workspace\TDD_HouseAutomation\src\LightDriverPrivate.h	/^    void (*TurnOn)(LightDriver);$/;"	member	line:38	struct:LightDriverInterfaceStruct
+TurnOff	D:\workspace\TDD_HouseAutomation\src\LightDriverPrivate.h	/^    void (*TurnOff)(LightDriver);$/;"	member	line:39	struct:LightDriverInterfaceStruct
+Destroy	D:\workspace\TDD_HouseAutomation\src\LightDriverPrivate.h	/^    void (*Destroy)(LightDriver);$/;"	member	line:40	struct:LightDriverInterfaceStruct
+LightDriverInterfaceStruct	D:\workspace\TDD_HouseAutomation\src\LightDriverPrivate.h	/^} LightDriverInterfaceStruct;$/;"	typedef	line:41	typeref:struct:LightDriverInterfaceStruct
+id	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int id;$/;"	member	line:8	struct:__anon9	file:
+day	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int day;$/;"	member	line:9	struct:__anon9	file:
+minuteOfDay	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int minuteOfDay;$/;"	member	line:10	struct:__anon9	file:
+event	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^    int event;$/;"	member	line:11	struct:__anon9	file:
+ScheduledLightEvent	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^} ScheduledLightEvent;$/;"	typedef	line:12	typeref:struct:__anon9	file:
 RandomMinute_Get	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^int (*RandomMinute_Get)(void);$/;"	variable	line:14
 scheduledEvents	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static ScheduledLightEvent scheduledEvents[MAX_EVENTS];$/;"	variable	line:16	file:
-LightScheduler_Init	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Init(void)$/;"	function	line:26	signature:(void)
-LightScheduler_Deinit	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Deinit(void)$/;"	function	line:34	signature:(void)
-LightScheduler_ScheduleTurnOn	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^int LightScheduler_ScheduleTurnOn(int id, int day, int minuteOfDay)$/;"	function	line:39	signature:(int id, int day, int minuteOfDay)
-LightScheduler_ScheduleTurnOff	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^int LightScheduler_ScheduleTurnOff(int id, int day, int minuteOfDay)$/;"	function	line:44	signature:(int id, int day, int minuteOfDay)
-LightScheduler_Randomize	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Randomize(int id, int day, int minuteOfDay)$/;"	function	line:49	signature:(int id, int day, int minuteOfDay)
-LightScheduler_ScheduleRemove	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_ScheduleRemove(int id, int day, int minuteOfDay)$/;"	function	line:59	signature:(int id, int day, int minuteOfDay)
-LightScheduler_Wakeup	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Wakeup(void)$/;"	function	line:67	signature:(void)
-scheduleEvent	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static int scheduleEvent(int id, int day, int minuteOfDay, int event)$/;"	function	line:76	file:	signature:(int id, int day, int minuteOfDay, int event)
-processEventDueNow	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static void processEventDueNow(Time *time, ScheduledLightEvent *lightEvent)$/;"	function	line:94	file:	signature:(Time *time, ScheduledLightEvent *lightEvent)
-operateLight	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static void operateLight(ScheduledLightEvent *lightEvent)$/;"	function	line:110	file:	signature:(ScheduledLightEvent *lightEvent)
-DoesLightRespondToday	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static bool DoesLightRespondToday(Time *time, int reactionDay)$/;"	function	line:118	file:	signature:(Time *time, int reactionDay)
-isEventScheduled	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static bool isEventScheduled(int i, int id, int day, int minuteOfDay)$/;"	function	line:134	file:	signature:(int i, int id, int day, int minuteOfDay)
-isIdOutOfBounds	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static bool isIdOutOfBounds(int id)$/;"	function	line:141	file:	signature:(int id)
+LightScheduler_Init	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Init(void)$/;"	function	line:27	signature:(void)
+LightScheduler_Deinit	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Deinit(void)$/;"	function	line:35	signature:(void)
+LightScheduler_ScheduleTurnOn	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^int LightScheduler_ScheduleTurnOn(int id, int day, int minuteOfDay)$/;"	function	line:40	signature:(int id, int day, int minuteOfDay)
+LightScheduler_ScheduleTurnOff	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^int LightScheduler_ScheduleTurnOff(int id, int day, int minuteOfDay)$/;"	function	line:45	signature:(int id, int day, int minuteOfDay)
+LightScheduler_Randomize	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Randomize(int id, int day, int minuteOfDay)$/;"	function	line:50	signature:(int id, int day, int minuteOfDay)
+LightScheduler_ScheduleRemove	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_ScheduleRemove(int id, int day, int minuteOfDay)$/;"	function	line:61	signature:(int id, int day, int minuteOfDay)
+LightScheduler_Wakeup	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^void LightScheduler_Wakeup(void)$/;"	function	line:69	signature:(void)
+scheduleEvent	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static int scheduleEvent(int id, int day, int minuteOfDay, int event)$/;"	function	line:78	file:	signature:(int id, int day, int minuteOfDay, int event)
+processEventDueNow	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static void processEventDueNow(Time *time, ScheduledLightEvent *lightEvent)$/;"	function	line:99	file:	signature:(Time *time, ScheduledLightEvent *lightEvent)
+operateLight	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static void operateLight(ScheduledLightEvent *lightEvent)$/;"	function	line:115	file:	signature:(ScheduledLightEvent *lightEvent)
+DoesLightRespondToday	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static bool DoesLightRespondToday(Time *time, int reactionDay)$/;"	function	line:123	file:	signature:(Time *time, int reactionDay)
+isEventScheduled	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static bool isEventScheduled(int i, int id, int day, int minuteOfDay)$/;"	function	line:139	file:	signature:(int i, int id, int day, int minuteOfDay)
+isIdOutOfBounds	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static bool isIdOutOfBounds(int id)$/;"	function	line:146	file:	signature:(int id)
+fixRandomizedTimeFromMidnightOffset	D:\workspace\TDD_HouseAutomation\src\LightScheduler.c	/^static void fixRandomizedTimeFromMidnightOffset(int i)$/;"	function	line:151	file:	signature:(int i)
 LIGHTSCHEDULER_H	D:\workspace\TDD_HouseAutomation\src\LightScheduler.h	/^#define LIGHTSCHEDULER_H$/;"	macro	line:2
 MAX_EVENTS	D:\workspace\TDD_HouseAutomation\src\LightScheduler.h	/^#define MAX_EVENTS /;"	macro	line:6
-LS_OK	D:\workspace\TDD_HouseAutomation\src\LightScheduler.h	/^enum {LS_OK = 0, LS_TOO_MANY_EVENTS = -1, LS_ID_OUT_OF_BOUNDS = -2};$/;"	enumerator	line:8	enum:__anon8
-LS_TOO_MANY_EVENTS	D:\workspace\TDD_HouseAutomation\src\LightScheduler.h	/^enum {LS_OK = 0, LS_TOO_MANY_EVENTS = -1, LS_ID_OUT_OF_BOUNDS = -2};$/;"	enumerator	line:8	enum:__anon8
-LS_ID_OUT_OF_BOUNDS	D:\workspace\TDD_HouseAutomation\src\LightScheduler.h	/^enum {LS_OK = 0, LS_TOO_MANY_EVENTS = -1, LS_ID_OUT_OF_BOUNDS = -2};$/;"	enumerator	line:8	enum:__anon8
+LIMIT_SCHEDULE_TIME	D:\workspace\TDD_HouseAutomation\src\LightScheduler.h	/^#define LIMIT_SCHEDULE_TIME /;"	macro	line:7
+LS_OK	D:\workspace\TDD_HouseAutomation\src\LightScheduler.h	/^enum {LS_OK = 0,$/;"	enumerator	line:9	enum:__anon10
+LS_TOO_MANY_EVENTS	D:\workspace\TDD_HouseAutomation\src\LightScheduler.h	/^      LS_TOO_MANY_EVENTS = -1,$/;"	enumerator	line:10	enum:__anon10
+LS_ID_OUT_OF_BOUNDS	D:\workspace\TDD_HouseAutomation\src\LightScheduler.h	/^      LS_ID_OUT_OF_BOUNDS = -2,$/;"	enumerator	line:11	enum:__anon10
+LS_INVALID_TIME	D:\workspace\TDD_HouseAutomation\src\LightScheduler.h	/^      LS_INVALID_TIME = -3};$/;"	enumerator	line:12	enum:__anon10
 boundTime	D:\workspace\TDD_HouseAutomation\src\RandomMinute.c	/^int boundTime;$/;"	variable	line:4
 RandomMinute_Get	D:\workspace\TDD_HouseAutomation\src\RandomMinute.c	/^int (*RandomMinute_Get)(void) = RandomMinute_Get_Implementation;$/;"	variable	line:7
 RandomMinute_Init	D:\workspace\TDD_HouseAutomation\src\RandomMinute.c	/^void RandomMinute_Init(int bound)$/;"	function	line:9	signature:(int bound)
 RandomMinute_Get_Implementation	D:\workspace\TDD_HouseAutomation\src\RandomMinute.c	/^static int RandomMinute_Get_Implementation(void)$/;"	function	line:14	file:	signature:(void)
 _RANDOMMINUTE_H	D:\workspace\TDD_HouseAutomation\src\RandomMinute.h	/^#define _RANDOMMINUTE_H$/;"	macro	line:2
 D_TimeService_H	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^#define D_TimeService_H$/;"	macro	line:29
-NONE	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    NONE = - 1,$/;"	enumerator	line:35	enum:__anon9
-MONDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    MONDAY,$/;"	enumerator	line:36	enum:__anon9
-TUESDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    TUESDAY,$/;"	enumerator	line:37	enum:__anon9
-WEDNESDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    WEDNESDAY,$/;"	enumerator	line:38	enum:__anon9
-THURSDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    THURSDAY,$/;"	enumerator	line:39	enum:__anon9
-FRIDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    FRIDAY,$/;"	enumerator	line:40	enum:__anon9
-SATURDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    SATURDAY,$/;"	enumerator	line:41	enum:__anon9
-SUNDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    SUNDAY,$/;"	enumerator	line:42	enum:__anon9
-EVERYDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    EVERYDAY = 10,$/;"	enumerator	line:43	enum:__anon9
-WEEKDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    WEEKDAY,$/;"	enumerator	line:44	enum:__anon9
-WEEKEND	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    WEEKEND$/;"	enumerator	line:45	enum:__anon9
-minuteOfDay	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    int minuteOfDay;$/;"	member	line:50	struct:__anon10
-dayOfWeek	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    int dayOfWeek;$/;"	member	line:51	struct:__anon10
-Time	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^} Time;$/;"	typedef	line:52	typeref:struct:__anon10
+NONE	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    NONE = - 1,$/;"	enumerator	line:35	enum:__anon11
+MONDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    MONDAY,$/;"	enumerator	line:36	enum:__anon11
+TUESDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    TUESDAY,$/;"	enumerator	line:37	enum:__anon11
+WEDNESDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    WEDNESDAY,$/;"	enumerator	line:38	enum:__anon11
+THURSDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    THURSDAY,$/;"	enumerator	line:39	enum:__anon11
+FRIDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    FRIDAY,$/;"	enumerator	line:40	enum:__anon11
+SATURDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    SATURDAY,$/;"	enumerator	line:41	enum:__anon11
+SUNDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    SUNDAY,$/;"	enumerator	line:42	enum:__anon11
+EVERYDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    EVERYDAY = 10,$/;"	enumerator	line:43	enum:__anon11
+WEEKDAY	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    WEEKDAY,$/;"	enumerator	line:44	enum:__anon11
+WEEKEND	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    WEEKEND$/;"	enumerator	line:45	enum:__anon11
+minuteOfDay	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    int minuteOfDay;$/;"	member	line:50	struct:__anon12
+dayOfWeek	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^    int dayOfWeek;$/;"	member	line:51	struct:__anon12
+Time	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^} Time;$/;"	typedef	line:52	typeref:struct:__anon12
 WakeupCallback	D:\workspace\TDD_HouseAutomation\src\TimeService.h	/^typedef void (*WakeupCallback)(void);$/;"	typedef	line:54
 setUp	D:\workspace\TDD_HouseAutomation\test\test_FakeTimeService.c	/^void setUp(void)$/;"	function	line:4	signature:(void)
 tearDown	D:\workspace\TDD_HouseAutomation\test\test_FakeTimeService.c	/^void tearDown(void)$/;"	function	line:9	signature:(void)
@@ -220,45 +328,72 @@ test_FakeTimeService_GetMinute	D:\workspace\TDD_HouseAutomation\test\test_FakeTi
 test_FakeTimeService_GetDay	D:\workspace\TDD_HouseAutomation\test\test_FakeTimeService.c	/^void test_FakeTimeService_GetDay(void)$/;"	function	line:35	signature:(void)
 test_FakeTimeService_SetMinute	D:\workspace\TDD_HouseAutomation\test\test_FakeTimeService.c	/^void test_FakeTimeService_SetMinute(void)$/;"	function	line:41	signature:(void)
 test_FakeTimeService_SetDay	D:\workspace\TDD_HouseAutomation\test\test_FakeTimeService.c	/^void test_FakeTimeService_SetDay(void)$/;"	function	line:47	signature:(void)
+setUp	D:\workspace\TDD_HouseAutomation\test\test_LightController.c	/^void setUp(void)$/;"	function	line:8	signature:(void)
+tearDown	D:\workspace\TDD_HouseAutomation\test\test_LightController.c	/^void tearDown(void)$/;"	function	line:16	signature:(void)
+test_LightController_InitializesSuccessfully	D:\workspace\TDD_HouseAutomation\test\test_LightController.c	/^void test_LightController_InitializesSuccessfully(void)$/;"	function	line:21	signature:(void)
+test_LightController_TurnsOnSuccessfully	D:\workspace\TDD_HouseAutomation\test\test_LightController.c	/^void test_LightController_TurnsOnSuccessfully(void)$/;"	function	line:30	signature:(void)
+test_LightController_TurnsOffSuccessfully	D:\workspace\TDD_HouseAutomation\test\test_LightController.c	/^void test_LightController_TurnsOffSuccessfully(void)$/;"	function	line:36	signature:(void)
+test_LightController_WrongLightIdReturnsDifferentState	D:\workspace\TDD_HouseAutomation\test\test_LightController.c	/^void test_LightController_WrongLightIdReturnsDifferentState(void)$/;"	function	line:43	signature:(void)
+test_LightControllerTurnsOnMultipleLightsSuccessfully	D:\workspace\TDD_HouseAutomation\test\test_LightController.c	/^void test_LightControllerTurnsOnMultipleLightsSuccessfully(void)$/;"	function	line:49	signature:(void)
+test_LightControllerTurnsOffMultipleLightsSuccessfully	D:\workspace\TDD_HouseAutomation\test\test_LightController.c	/^void test_LightControllerTurnsOffMultipleLightsSuccessfully(void)$/;"	function	line:57	signature:(void)
 setUp	D:\workspace\TDD_HouseAutomation\test\test_LightControllerSpy.c	/^void setUp(void)$/;"	function	line:4	signature:(void)
 tearDown	D:\workspace\TDD_HouseAutomation\test\test_LightControllerSpy.c	/^void tearDown(void)$/;"	function	line:9	signature:(void)
 test_LightControllerSpy_Initialize	D:\workspace\TDD_HouseAutomation\test\test_LightControllerSpy.c	/^void test_LightControllerSpy_Initialize(void)$/;"	function	line:14	signature:(void)
 test_LightControllerSpy_RememberTheLastLightIdControlled	D:\workspace\TDD_HouseAutomation\test\test_LightControllerSpy.c	/^void test_LightControllerSpy_RememberTheLastLightIdControlled(void)$/;"	function	line:23	signature:(void)
 test_LightControllerSpy_RememberAllLightStates	D:\workspace\TDD_HouseAutomation\test\test_LightControllerSpy.c	/^void test_LightControllerSpy_RememberAllLightStates(void)$/;"	function	line:30	signature:(void)
-setUp	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void setUp(void)$/;"	function	line:6	signature:(void)
-tearDown	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void tearDown(void)$/;"	function	line:12	signature:(void)
-setTimeTo	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void setTimeTo(int day, int minuteOfDay)$/;"	function	line:18	signature:(int day, int minuteOfDay)
-checkLightState	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void checkLightState(int id, int state)$/;"	function	line:24	signature:(int id, int state)
-test_LightScheduler_InitStartsOneMinuteAlarm	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_InitStartsOneMinuteAlarm(void)$/;"	function	line:34	signature:(void)
-test_LightScheduler_DeinitCancelsOneMinuteAlarm	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_DeinitCancelsOneMinuteAlarm(void)$/;"	function	line:40	signature:(void)
-test_LightScheduler_NoChangeToLightsDuringInitialization	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_NoChangeToLightsDuringInitialization(void)$/;"	function	line:47	signature:(void)
-test_LightScheduler_ScheduleOnEverydayNotTimeYet	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleOnEverydayNotTimeYet(void)$/;"	function	line:52	signature:(void)
-test_LightScheduler_ScheduleOnEverydayItsTime	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleOnEverydayItsTime(void)$/;"	function	line:60	signature:(void)
-test_LightScheduler_ScheduleOffEverydayItsTime	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleOffEverydayItsTime(void)$/;"	function	line:68	signature:(void)
-test_LightScheduler_ScheduleTuesdayItsMonday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleTuesdayItsMonday(void)$/;"	function	line:76	signature:(void)
-test_LightScheduler_ScheduleTuesdayItsTuesday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleTuesdayItsTuesday(void)$/;"	function	line:84	signature:(void)
-test_LightScheduler_ScheduleWeekendItsFriday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekendItsFriday(void)$/;"	function	line:92	signature:(void)
-test_LightScheduler_ScheduleWeekendItsSaturday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekendItsSaturday(void)$/;"	function	line:100	signature:(void)
-test_LightScheduler_ScheduleWeekendItsSunday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekendItsSunday(void)$/;"	function	line:108	signature:(void)
-test_LightScheduler_ScheduleWeekendItsMonday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekendItsMonday(void)$/;"	function	line:116	signature:(void)
-test_LightScheduler_ScheduleWeekdayItsMonday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekdayItsMonday(void)$/;"	function	line:124	signature:(void)
-test_LightScheduler_ScheduleWeekdayItsSunday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekdayItsSunday(void)$/;"	function	line:132	signature:(void)
-test_LightScheduler_RememberTwoEventsAtTheSameTime	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RememberTwoEventsAtTheSameTime(void)$/;"	function	line:140	signature:(void)
-test_LightScheduler_RejectsTooManyEvents	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RejectsTooManyEvents(void)$/;"	function	line:150	signature:(void)
-test_LightScheduler_RemoveFreesScheduleSlot	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RemoveFreesScheduleSlot(void)$/;"	function	line:158	signature:(void)
-test_LightScheduler_RemoveMultipleScheduleEvent	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RemoveMultipleScheduleEvent(void)$/;"	function	line:167	signature:(void)
-test_LightScheduler_AcceptsValidLightIds	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_AcceptsValidLightIds(void)$/;"	function	line:182	signature:(void)
-test_LightScheduler_RejectsInvalidLightIds	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RejectsInvalidLightIds(void)$/;"	function	line:189	signature:(void)
-test_LightScheduler_RejectsInvalidTimeAfterMidnight	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RejectsInvalidTimeAfterMidnight(void)$/;"	function	line:195	signature:(void)
-savedRandomMinute_Get	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^int (*savedRandomMinute_Get)(void);$/;"	variable	line:8
-RandomMinute_Get	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^int (*RandomMinute_Get)(void);$/;"	variable	line:9
-setUp	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void setUp(void)$/;"	function	line:11	signature:(void)
-tearDown	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void tearDown(void)$/;"	function	line:19	signature:(void)
-setTimeTo	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void setTimeTo(int day, int minuteOfDay)$/;"	function	line:26	signature:(int day, int minuteOfDay)
-checkLightState	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void checkLightState(int id, int state)$/;"	function	line:32	signature:(int id, int state)
-test_LightSchedulerRandomize_TurnsOnEarly	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void test_LightSchedulerRandomize_TurnsOnEarly(void)$/;"	function	line:42	signature:(void)
-test_LightSchedulerRandomize_TurnsOnLater	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void test_LightSchedulerRandomize_TurnsOnLater(void)$/;"	function	line:55	signature:(void)
-BOUND	D:\workspace\TDD_HouseAutomation\test\test_RandomMinute.c	/^enum {BOUND = 30};$/;"	enumerator	line:6	enum:__anon11	file:
+test_LightControllerSpy_GetLightStateRejectsIdOutOfBounds	D:\workspace\TDD_HouseAutomation\test\test_LightControllerSpy.c	/^void test_LightControllerSpy_GetLightStateRejectsIdOutOfBounds(void)$/;"	function	line:38	signature:(void)
+NON_SENSE_POINTER	D:\workspace\TDD_HouseAutomation\test\test_LightDriver.c	/^#define NON_SENSE_POINTER /;"	macro	line:4	file:
+savedDriver	D:\workspace\TDD_HouseAutomation\test\test_LightDriver.c	/^static LightDriver savedDriver = NON_SENSE_POINTER;$/;"	variable	line:5	file:
+shouldNotBeCalled	D:\workspace\TDD_HouseAutomation\test\test_LightDriver.c	/^static void shouldNotBeCalled(LightDriver self) { savedDriver = self; }$/;"	function	line:6	file:	signature:(LightDriver self)
+interface	D:\workspace\TDD_HouseAutomation\test\test_LightDriver.c	/^LightDriverInterfaceStruct interface =$/;"	variable	line:8
+testDriver	D:\workspace\TDD_HouseAutomation\test\test_LightDriver.c	/^LightDriverStruct testDriver =$/;"	variable	line:15
+setUp	D:\workspace\TDD_HouseAutomation\test\test_LightDriver.c	/^void setUp(void)$/;"	function	line:21	signature:(void)
+tearDown	D:\workspace\TDD_HouseAutomation\test\test_LightDriver.c	/^void tearDown(void)$/;"	function	line:25	signature:(void)
+test_LightDriver_NullDriverDoesNotCrash	D:\workspace\TDD_HouseAutomation\test\test_LightDriver.c	/^void test_LightDriver_NullDriverDoesNotCrash(void)$/;"	function	line:29	signature:(void)
+test_LightDriver_NullInterfaceDoesNotCrash	D:\workspace\TDD_HouseAutomation\test\test_LightDriver.c	/^void test_LightDriver_NullInterfaceDoesNotCrash(void)$/;"	function	line:38	signature:(void)
+lightDriverSpy	D:\workspace\TDD_HouseAutomation\test\test_LightDriverSpy.c	/^LightDriver lightDriverSpy;$/;"	variable	line:25
+setUp	D:\workspace\TDD_HouseAutomation\test\test_LightDriverSpy.c	/^void setUp(void)$/;"	function	line:28	signature:(void)
+tearDown	D:\workspace\TDD_HouseAutomation\test\test_LightDriverSpy.c	/^void tearDown(void)$/;"	function	line:34	signature:(void)
+test_LightDriverSpy_Create	D:\workspace\TDD_HouseAutomation\test\test_LightDriverSpy.c	/^void test_LightDriverSpy_Create(void)$/;"	function	line:39	signature:(void)
+test_LightDriverSpy_TurnOn	D:\workspace\TDD_HouseAutomation\test\test_LightDriverSpy.c	/^void test_LightDriverSpy_TurnOn(void)$/;"	function	line:44	signature:(void)
+test_LightDriverSpy_TurnOff	D:\workspace\TDD_HouseAutomation\test\test_LightDriverSpy.c	/^void test_LightDriverSpy_TurnOff(void)$/;"	function	line:50	signature:(void)
+test_LightDriverSpy_RecordsLastIdLastTurnOn	D:\workspace\TDD_HouseAutomation\test\test_LightDriverSpy.c	/^void test_LightDriverSpy_RecordsLastIdLastTurnOn(void)$/;"	function	line:56	signature:(void)
+test_LightDriverSpy_RecordsLastIdLastTurnOff	D:\workspace\TDD_HouseAutomation\test\test_LightDriverSpy.c	/^void test_LightDriverSpy_RecordsLastIdLastTurnOff(void)$/;"	function	line:63	signature:(void)
+setUp	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void setUp(void)$/;"	function	line:9	signature:(void)
+tearDown	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void tearDown(void)$/;"	function	line:18	signature:(void)
+setTimeTo	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void setTimeTo(int day, int minuteOfDay)$/;"	function	line:24	signature:(int day, int minuteOfDay)
+checkLightState	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void checkLightState(int id, int state)$/;"	function	line:30	signature:(int id, int state)
+test_LightScheduler_NoChangeToLightsDuringInitialization	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_NoChangeToLightsDuringInitialization(void)$/;"	function	line:40	signature:(void)
+test_LightScheduler_InitStartsOneMinuteAlarm	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_InitStartsOneMinuteAlarm(void)$/;"	function	line:45	signature:(void)
+test_LightScheduler_DeinitCancelsOneMinuteAlarm	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_DeinitCancelsOneMinuteAlarm(void)$/;"	function	line:51	signature:(void)
+test_LightScheduler_ScheduleOnEverydayNotTimeYet	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleOnEverydayNotTimeYet(void)$/;"	function	line:58	signature:(void)
+test_LightScheduler_ScheduleOnEverydayItsTime	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleOnEverydayItsTime(void)$/;"	function	line:66	signature:(void)
+test_LightScheduler_ScheduleOffEverydayItsTime	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleOffEverydayItsTime(void)$/;"	function	line:74	signature:(void)
+test_LightScheduler_ScheduleTuesdayItsMonday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleTuesdayItsMonday(void)$/;"	function	line:82	signature:(void)
+test_LightScheduler_ScheduleTuesdayItsTuesday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleTuesdayItsTuesday(void)$/;"	function	line:90	signature:(void)
+test_LightScheduler_ScheduleWeekendItsFriday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekendItsFriday(void)$/;"	function	line:98	signature:(void)
+test_LightScheduler_ScheduleWeekendItsSaturday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekendItsSaturday(void)$/;"	function	line:106	signature:(void)
+test_LightScheduler_ScheduleWeekendItsSunday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekendItsSunday(void)$/;"	function	line:114	signature:(void)
+test_LightScheduler_ScheduleWeekendItsMonday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekendItsMonday(void)$/;"	function	line:122	signature:(void)
+test_LightScheduler_ScheduleWeekdayItsMonday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekdayItsMonday(void)$/;"	function	line:130	signature:(void)
+test_LightScheduler_ScheduleWeekdayItsSunday	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_ScheduleWeekdayItsSunday(void)$/;"	function	line:138	signature:(void)
+test_LightScheduler_RememberTwoEventsAtTheSameTime	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RememberTwoEventsAtTheSameTime(void)$/;"	function	line:146	signature:(void)
+test_LightScheduler_RejectsTooManyEvents	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RejectsTooManyEvents(void)$/;"	function	line:156	signature:(void)
+test_LightScheduler_RemoveFreesScheduleSlot	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RemoveFreesScheduleSlot(void)$/;"	function	line:164	signature:(void)
+test_LightScheduler_RemoveMultipleScheduleEvent	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RemoveMultipleScheduleEvent(void)$/;"	function	line:173	signature:(void)
+test_LightScheduler_AcceptsValidLightIds	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_AcceptsValidLightIds(void)$/;"	function	line:188	signature:(void)
+test_LightScheduler_RejectsInvalidLightIds	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RejectsInvalidLightIds(void)$/;"	function	line:195	signature:(void)
+test_LightScheduler_RejectsInvalidTimeAfterMidnight	D:\workspace\TDD_HouseAutomation\test\test_LightScheduler.c	/^void test_LightScheduler_RejectsInvalidTimeAfterMidnight(void)$/;"	function	line:201	signature:(void)
+savedRandomMinute_Get	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^int (*savedRandomMinute_Get)(void);$/;"	variable	line:11
+RandomMinute_Get	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^int (*RandomMinute_Get)(void);$/;"	variable	line:12
+setUp	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void setUp(void)$/;"	function	line:14	signature:(void)
+tearDown	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void tearDown(void)$/;"	function	line:25	signature:(void)
+setTimeTo	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void setTimeTo(int day, int minuteOfDay)$/;"	function	line:32	signature:(int day, int minuteOfDay)
+checkLightState	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void checkLightState(int id, int state)$/;"	function	line:38	signature:(int id, int state)
+test_LightSchedulerRandomize_TurnsOnEarly	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void test_LightSchedulerRandomize_TurnsOnEarly(void)$/;"	function	line:48	signature:(void)
+test_LightSchedulerRandomize_TurnsOnLater	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void test_LightSchedulerRandomize_TurnsOnLater(void)$/;"	function	line:61	signature:(void)
+test_LightSchedulerRandomize_TurnsOnAfterMidnightWhenSetBeforeMidnight	D:\workspace\TDD_HouseAutomation\test\test_LightSchedulerRandomize.c	/^void test_LightSchedulerRandomize_TurnsOnAfterMidnightWhenSetBeforeMidnight(void)$/;"	function	line:74	signature:(void)
+BOUND	D:\workspace\TDD_HouseAutomation\test\test_RandomMinute.c	/^enum {BOUND = 30};$/;"	enumerator	line:6	enum:__anon13	file:
 minute	D:\workspace\TDD_HouseAutomation\test\test_RandomMinute.c	/^int minute;$/;"	variable	line:8
 setUp	D:\workspace\TDD_HouseAutomation\test\test_RandomMinute.c	/^void setUp(void)$/;"	function	line:10	signature:(void)
 tearDown	D:\workspace\TDD_HouseAutomation\test\test_RandomMinute.c	/^void tearDown(void)$/;"	function	line:15	signature:(void)
