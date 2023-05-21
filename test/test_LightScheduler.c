@@ -4,6 +4,7 @@
 #include "LightDriverSpy.h"
 #include "LightDriver.h"
 #include "FakeTimeService.h"
+#include "RandomMinute.h"
 
 void setUp(void)
 {

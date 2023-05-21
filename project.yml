@@ -36,7 +36,10 @@
   :source:
     - src/**
     - mocks/**
-    - drivers/**
+    #- drivers/**
+  :include:
+    - src/**
+    - mocks/**
   :support:
     - test/support
   :libraries: []

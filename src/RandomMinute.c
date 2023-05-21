@@ -4,7 +4,7 @@
 int boundTime;
 
 static int RandomMinute_Get_Implementation(void);
-int (*RandomMinute_Get)(void) = RandomMinute_Get_Implementation;
+static int (*RandomMinute_Get_)(void) = RandomMinute_Get_Implementation;
 
 void RandomMinute_Init(int bound)
 {
@@ -17,4 +17,25 @@ static int RandomMinute_Get_Implementation(void)
     ++seed;
     srand(seed + time(NULL));
     return (rand() % (boundTime * 2 + 1)) - boundTime;
+}
+
+bool RandomMinute_setRandomMinuteGetterFuncPtr(int (*f)()) 
+{
+    if (NULL == f) {
+        return false;
+    }
+
+    RandomMinute_Get_ = f;
+    return true;
+}
+
+int RandomMinute_Get(void)
+{
+    return RandomMinute_Get_();
+}
+
+void RandomMinute_ResetAll(void)
+{
+    boundTime = 0;
+    RandomMinute_Get_ = RandomMinute_Get_Implementation;
 }

@@ -11,9 +11,8 @@ typedef struct
     int event;
 } ScheduledLightEvent;
 
-int (*RandomMinute_Get)(void);
-
 static ScheduledLightEvent scheduledEvents[MAX_EVENTS];
+static const int RANDOM_MINUTE_BOUND = 60;
 
 static int scheduleEvent(int id, int day, int minuteOfDay, int event);
 static void processEventDueNow(Time *time, ScheduledLightEvent *lightEvent);
@@ -30,6 +29,7 @@ void LightScheduler_Init(void)
         scheduledEvents[i].id = UNUSED;
 
     TimeService_SetPeriodicAlarmInSeconds(60, LightScheduler_Wakeup);
+    RandomMinute_Init(RANDOM_MINUTE_BOUND);
 }
 
 void LightScheduler_Deinit(void)

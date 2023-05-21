@@ -8,7 +8,6 @@
 #include "RandomMinute.h"
 
 int (*savedRandomMinute_Get)(void);
-int (*RandomMinute_Get)(void);
 
 void setUp(void)
 {
@@ -17,15 +16,14 @@ void setUp(void)
     LightDriverSpy_InstallInterface();
     LightDriverSpy_Reset();
     LightScheduler_Init();
-    savedRandomMinute_Get = RandomMinute_Get;
-    RandomMinute_Get = FakeRandomMinute_Get;
+    RandomMinute_setRandomMinuteGetterFuncPtr(FakeRandomMinute_Get);
 }
 
 void tearDown(void)
 {
     LightController_Destroy();
     LightScheduler_Deinit();
-    RandomMinute_Get = savedRandomMinute_Get;
+    RandomMinute_ResetAll();
 }
 
 void setTimeTo(int day, int minuteOfDay)
